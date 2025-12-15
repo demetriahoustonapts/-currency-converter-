@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="100% Free currency converter - No registration or contact info required! Convert between USD, EUR, GBP, JPY and 150+ world currencies with real-time exchange rates instantly.">
+    <meta name="keywords" content="free currency converter, no registration, exchange rate, USD to EUR, GBP to USD, currency exchange, forex rates, no signup">
+    <title>Free Currency Converter - No Registration Required | Real-Time Rates</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-exchange-alt"></i>
+                    <h1>CurrencyConvert<span>.Pro</span></h1>
+                </div>
+                <nav>
+                    <a href="#converter">Converter</a>
+                    <a href="#rates">Live Rates</a>
+                    <a href="#popular">Popular</a>
+                    <a href="#about">About</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Top Banner Ad Space -->
+    <div class="ad-container ad-banner-top">
+        <div class="ad-placeholder">
+            <!-- Google AdSense Ad Unit - Horizontal Banner (728x90 or responsive) -->
+            <div class="ad-label">Advertisement</div>
+            <div class="ad-demo">
+                <p>Google AdSense Banner Ad</p>
+                <small>728x90 or Responsive</small>
+            </div>
+            <!-- Replace with your AdSense code:
+            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX"
+                 crossorigin="anonymous"></script>
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>
+                 (adsbygoogle = window.adsbygoogle || []).push({});
+            </script>
+            -->
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <!-- Hero Section -->
+            <section class="hero" id="converter">
+                <h2>Convert Currencies Instantly</h2>
+                <p class="subtitle">Real-time exchange rates for 150+ world currencies</p>
+                
+                <!-- Free Badge -->
+                <div class="free-badge-container">
+                    <span class="badge badge-success"><i class="fas fa-check-circle"></i> 100% Free to Use</span>
+                    <span class="badge badge-primary"><i class="fas fa-shield-alt"></i> No Registration Required</span>
+                    <span class="badge badge-info"><i class="fas fa-user-secret"></i> No Contact Info Needed</span>
+                </div>
+                
+                <!-- Currency Converter Card -->
+                <div class="converter-card">
+                    <div class="converter-row">
+                        <!-- From Currency -->
+                        <div class="currency-input-group">
+                            <label for="fromAmount">Amount</label>
+                            <div class="input-with-currency">
+                                <input type="number" id="fromAmount" value="1" min="0" step="0.01">
+                                <select id="fromCurrency" class="currency-select">
+                                    <option value="USD" selected>USD - US Dollar</option>
+                                    <option value="EUR">EUR - Euro</option>
+                                    <option value="GBP">GBP - British Pound</option>
+                                    <option value="JPY">JPY - Japanese Yen</option>
+                                    <option value="AUD">AUD - Australian Dollar</option>
+                                    <option value="CAD">CAD - Canadian Dollar</option>
+                                    <option value="CHF">CHF - Swiss Franc</option>
+                                    <option value="CNY">CNY - Chinese Yuan</option>
+                                    <option value="INR">INR - Indian Rupee</option>
+                                    <option value="MXN">MXN - Mexican Peso</option>
+                                    <option value="BRL">BRL - Brazilian Real</option>
+                                    <option value="ZAR">ZAR - South African Rand</option>
+                                    <option value="SGD">SGD - Singapore Dollar</option>
+                                    <option value="HKD">HKD - Hong Kong Dollar</option>
+                                    <option value="SEK">SEK - Swedish Krona</option>
+                                    <option value="NOK">NOK - Norwegian Krone</option>
+                                    <option value="DKK">DKK - Danish Krone</option>
+                                    <option value="NZD">NZD - New Zealand Dollar</option>
+                                    <option value="KRW">KRW - South Korean Won</option>
+                                    <option value="TRY">TRY - Turkish Lira</option>
+                                    <option value="RUB">RUB - Russian Ruble</option>
+                                    <option value="PLN">PLN - Polish Zloty</option>
+                                    <option value="THB">THB - Thai Baht</option>
+                                    <option value="MYR">MYR - Malaysian Ringgit</option>
+                                    <option value="IDR">IDR - Indonesian Rupiah</option>
+                                    <option value="PHP">PHP - Philippine Peso</option>
+                                    <option value="CZK">CZK - Czech Koruna</option>
+                                    <option value="ILS">ILS - Israeli Shekel</option>
+                                    <option value="AED">AED - UAE Dirham</option>
+                                    <option value="SAR">SAR - Saudi Riyal</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Swap Button -->
+                        <button class="swap-btn" id="swapBtn" title="Swap currencies">
+                            <i class="fas fa-exchange-alt"></i>
+                        </button>
+
+                        <!-- To Currency -->
+                        <div class="currency-input-group">
+                            <label for="toAmount">Converted Amount</label>
+                            <div class="input-with-currency">
+                                <input type="number" id="toAmount" readonly>
+                                <select id="toCurrency" class="currency-select">
+                                    <option value="USD">USD - US Dollar</option>
+                                    <option value="EUR" selected>EUR - Euro</option>
+                                    <option value="GBP">GBP - British Pound</option>
+                                    <option value="JPY">JPY - Japanese Yen</option>
+                                    <option value="AUD">AUD - Australian Dollar</option>
+                                    <option value="CAD">CAD - Canadian Dollar</option>
+                                    <option value="CHF">CHF - Swiss Franc</option>
+                                    <option value="CNY">CNY - Chinese Yuan</option>
+                                    <option value="INR">INR - Indian Rupee</option>
+                                    <option value="MXN">MXN - Mexican Peso</option>
+                                    <option value="BRL">BRL - Brazilian Real</option>
+                                    <option value="ZAR">ZAR - South African Rand</option>
+                                    <option value="SGD">SGD - Singapore Dollar</option>
+                                    <option value="HKD">HKD - Hong Kong Dollar</option>
+                                    <option value="SEK">SEK - Swedish Krona</option>
+                                    <option value="NOK">NOK - Norwegian Krone</option>
+                                    <option value="DKK">DKK - Danish Krone</option>
+                                    <option value="NZD">NZD - New Zealand Dollar</option>
+                                    <option value="KRW">KRW - South Korean Won</option>
+                                    <option value="TRY">TRY - Turkish Lira</option>
+                                    <option value="RUB">RUB - Russian Ruble</option>
+                                    <option value="PLN">PLN - Polish Zloty</option>
+                                    <option value="THB">THB - Thai Baht</option>
+                                    <option value="MYR">MYR - Malaysian Ringgit</option>
+                                    <option value="IDR">IDR - Indonesian Rupiah</option>
+                                    <option value="PHP">PHP - Philippine Peso</option>
+                                    <option value="CZK">CZK - Czech Koruna</option>
+                                    <option value="ILS">ILS - Israeli Shekel</option>
+                                    <option value="AED">AED - UAE Dirham</option>
+                                    <option value="SAR">SAR - Saudi Riyal</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exchange Rate Info -->
+                    <div class="rate-info" id="rateInfo">
+                        <i class="fas fa-info-circle"></i>
+                        <span id="rateText">1 USD = 0.85 EUR</span>
+                        <small id="lastUpdate">Last updated: Loading...</small>
+                    </div>
+
+                    <!-- Convert Button -->
+                    <button class="convert-btn" id="convertBtn">
+                        <i class="fas fa-sync-alt"></i> Convert Now
+                    </button>
+                </div>
+            </section>
+
+            <!-- Sidebar Ad (Left) for Desktop -->
+            <div class="ad-sidebar ad-sidebar-left">
+                <div class="ad-placeholder">
+                    <div class="ad-label">Advertisement</div>
+                    <div class="ad-demo">
+                        <p>AdSense</p>
+                        <small>Sidebar</small>
+                        <small>160x600</small>
+                    </div>
+                    <!-- Replace with your AdSense code -->
+                </div>
+            </div>
+
+            <!-- Sidebar Ad (Right) for Desktop -->
+            <div class="ad-sidebar ad-sidebar-right">
+                <div class="ad-placeholder">
+                    <div class="ad-label">Advertisement</div>
+                    <div class="ad-demo">
+                        <p>AdSense</p>
+                        <small>Sidebar</small>
+                        <small>160x600</small>
+                    </div>
+                    <!-- Replace with your AdSense code -->
+                </div>
+            </div>
+
+            <!-- Popular Conversions Section -->
+            <section class="popular-section" id="popular">
+                <h3><i class="fas fa-fire"></i> Popular Currency Conversions</h3>
+                <div class="popular-grid" id="popularGrid">
+                    <!-- Will be populated by JavaScript -->
+                    <div class="popular-card skeleton"></div>
+                    <div class="popular-card skeleton"></div>
+                    <div class="popular-card skeleton"></div>
+                    <div class="popular-card skeleton"></div>
+                    <div class="popular-card skeleton"></div>
+                    <div class="popular-card skeleton"></div>
+                </div>
+            </section>
+
+            <!-- Middle Banner Ad -->
+            <div class="ad-container ad-banner-middle">
+                <div class="ad-placeholder">
+                    <div class="ad-label">Advertisement</div>
+                    <div class="ad-demo">
+                        <p>Google AdSense Banner Ad</p>
+                        <small>728x90 or Responsive</small>
+                    </div>
+                    <!-- Replace with your AdSense code -->
+                </div>
+            </div>
+
+            <!-- Live Exchange Rates Table -->
+            <section class="rates-section" id="rates">
+                <h3><i class="fas fa-chart-line"></i> Live Exchange Rates (Base: USD)</h3>
+                <div class="rates-table-container">
+                    <table class="rates-table" id="ratesTable">
+                        <thead>
+                            <tr>
+                                <th>Currency</th>
+                                <th>Code</th>
+                                <th>Rate</th>
+                                <th>Change</th>
+                            </tr>
+                        </thead>
+                        <tbody id="ratesTableBody">
+                            <!-- Will be populated by JavaScript -->
+                            <tr><td colspan="4" class="loading">Loading exchange rates...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- About/Info Section -->
+            <section class="info-section" id="about">
+                <h3><i class="fas fa-info-circle"></i> About Currency Conversion</h3>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <i class="fas fa-gift"></i>
+                        <h4>100% Free Forever</h4>
+                        <p>No hidden fees, no subscriptions, no premium tiers. Our currency converter is completely free to use, always.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-user-lock"></i>
+                        <h4>No Registration</h4>
+                        <p>Start converting instantly. No account creation, no email required, no contact information needed.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-clock"></i>
+                        <h4>Real-Time Rates</h4>
+                        <p>Live exchange rates updated every hour from reliable financial data sources for accurate conversions.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-globe"></i>
+                        <h4>150+ Currencies</h4>
+                        <p>Convert between all major world currencies including USD, EUR, GBP, JPY, and many more.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Private & Secure</h4>
+                        <p>Your conversion data stays in your browser. We don't track, store, or share your transaction information.</p>
+                    </div>
+                    <div class="info-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Mobile Friendly</h4>
+                        <p>Access our currency converter from any device - desktop, tablet, or smartphone. Works everywhere.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bottom Banner Ad -->
+            <div class="ad-container ad-banner-bottom">
+                <div class="ad-placeholder">
+                    <div class="ad-label">Advertisement</div>
+                    <div class="ad-demo">
+                        <p>Google AdSense Banner Ad</p>
+                        <small>728x90 or Responsive</small>
+                    </div>
+                    <!-- Replace with your AdSense code -->
+                </div>
+            </div>
+
+            <!-- FAQ Section for SEO -->
+            <section class="faq-section">
+                <h3><i class="fas fa-question-circle"></i> Frequently Asked Questions</h3>
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h4>How accurate are the exchange rates?</h4>
+                        <p>Our exchange rates are sourced from reliable financial data providers and are updated regularly to ensure accuracy.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Is this currency converter free to use?</h4>
+                        <p>Yes! Our currency converter is 100% free to use, forever. No registration, no email required, no contact information needed. Just visit and start converting instantly.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Do I need to create an account or register?</h4>
+                        <p>No! You can start using the converter immediately without creating an account, providing an email, or sharing any personal information. No sign-up required.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>How often are rates updated?</h4>
+                        <p>Exchange rates are updated every hour to provide you with the most current conversion rates.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4>Can I use this for business transactions?</h4>
+                        <p>This tool is for informational purposes. For actual currency exchange, please consult your bank or financial institution.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CurrencyConvert.Pro</h4>
+                    <p>Your trusted source for real-time currency conversion and exchange rates.</p>
+                    <p><strong>100% Free • No Registration • No Contact Info Required</strong></p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#converter">Currency Converter</a></li>
+                        <li><a href="#rates">Exchange Rates</a></li>
+                        <li><a href="#popular">Popular Conversions</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Popular Pairs</h4>
+                    <ul>
+                        <li><a href="#converter">USD to EUR</a></li>
+                        <li><a href="#converter">GBP to USD</a></li>
+                        <li><a href="#converter">EUR to GBP</a></li>
+                        <li><a href="#converter">USD to JPY</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CurrencyConvert.Pro - All Rights Reserved | <a href="privacy.html">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+                <p class="disclaimer">Disclaimer: Exchange rates are for informational purposes only and may differ from actual rates offered by financial institutions.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
