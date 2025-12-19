@@ -44,7 +44,9 @@ const CONFIG = {
         'CZK': 'Czech Koruna',
         'ILS': 'Israeli Shekel',
         'AED': 'UAE Dirham',
-        'SAR': 'Saudi Riyal'
+                'SAR': 'Saudi Riyal',
+        'DOP': 'Dominican Peso'
+
     }
 };
 
