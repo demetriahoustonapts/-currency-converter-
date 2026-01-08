@@ -3,405 +3,528 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="100% Free currency converter - No registration or contact info required! Convert between USD, EUR, GBP, JPY and 150+ world currencies with real-time exchange rates instantly.">
-    <meta name="keywords" content="free currency converter, no registration, exchange rate, USD to EUR, GBP to USD, currency exchange, forex rates, no signup">
-    
-    <!-- Google AdSense Verification Code -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4550762393349375"
-     crossorigin="anonymous"></script>
-    
-    <!-- Canonical URL - Tells Google this is the main version -->
-    <link rel="canonical" href="https://www.quickcurrency.net/" />
-    
-    <title>Free Currency Converter - No Registration Required | Real-Time Rates</title>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-TJ0342H68X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-TJ0342H68X');
-</script>
-
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Free currency converter with real-time exchange rates for 150+ world currencies. Convert USD, EUR, GBP, JPY and more instantly. No registration required.">
+    <meta name="keywords" content="currency converter, exchange rates, USD to EUR, currency exchange, forex rates, money converter">
+    <meta name="author" content="QuickCurrency.net">
+    <link rel="canonical" href="https://www.quickcurrency.net/">
+    <meta property="og:title" content="QuickCurrency.net - Free Real-Time Currency Converter">
+    <meta property="og:description" content="Convert 150+ world currencies instantly with live exchange rates. 100% free, no registration required.">
+    <meta property="og:url" content="https://www.quickcurrency.net/">
+    <meta property="og:type" content="website">
+    <title>QuickCurrency.net - Free Real-Time Currency Converter | 150+ Currencies</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header {
+            background: white;
+            padding: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 40px;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #764ba2;
+        }
+        .hero {
+            text-align: center;
+            color: white;
+            margin-bottom: 40px;
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 30px 0;
+            flex-wrap: wrap;
+        }
+        .feature {
+            background: rgba(255,255,255,0.2);
+            padding: 15px 30px;
+            border-radius: 25px;
+            color: white;
+            font-weight: 600;
+        }
+        .converter-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+        .input-group {
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+        input, select {
+            width: 100%;
+            padding: 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        input:focus, select:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+        .currency-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        .result {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .update-time {
+            text-align: center;
+            color: #999;
+            font-size: 0.9em;
+            margin-top: 15px;
+        }
+        .popular-conversions {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 800px;
+        }
+        .popular-conversions h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        .conversion-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        .conversion-item {
+            padding: 15px;
+            background: #f5f5f5;
+            border-radius: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: transform 0.3s, background 0.3s;
+        }
+        .conversion-item:hover {
+            transform: translateY(-5px);
+            background: #667eea;
+            color: white;
+        }
+        .rates-table {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            margin: 40px auto;
+            max-width: 800px;
+        }
+        .rates-table h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        th {
+            background: #f5f5f5;
+            font-weight: 600;
+            color: #667eea;
+        }
+        .content-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 1000px;
+        }
+        .content-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 2em;
+        }
+        .content-section h3 {
+            color: #764ba2;
+            margin-top: 25px;
+            margin-bottom: 15px;
+        }
+        .content-section p {
+            margin-bottom: 15px;
+            line-height: 1.8;
+        }
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .info-card {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+        }
+        .info-card h4 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        .faq-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 40px auto;
+            max-width: 1000px;
+        }
+        .faq-section h3 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+        .faq-item {
+            margin-bottom: 25px;
+            padding: 20px;
+            background: #f8f9fa;
+            border-radius: 10px;
+        }
+        .faq-item h4 {
+            color: #764ba2;
+            margin-bottom: 10px;
+        }
+        footer {
+            background: rgba(255,255,255,0.1);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 60px;
+        }
+        footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+            .currency-row {
+                grid-template-columns: 1fr;
+            }
+            .converter-card, .content-section {
+                padding: 25px;
+            }
+        }
+    </style>
 </head>
-
 <body>
-    <!-- Header -->
     <header>
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <i class="fas fa-exchange-alt"></i>
-                    <h1>QuickCurrency<span>.net</span></h1>
-                </div>
-                <nav>
-                    <a href="#converter">Converter</a>
-                    <a href="#rates">Live Rates</a>
-                    <a href="#popular">Popular</a>
-                    <a href="/about.html">About</a>
-                    <a href="/contact.html">Contact</a>
-                </nav>
-            </div>
-        </div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/blog/">Blog</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
     </header>
 
-    <!-- Top Banner Ad Space -->
-    <div class="ad-container ad-banner-top">
-        <div class="ad-placeholder">
-            <div class="ad-label">Advertisement</div>
-            <div class="ad-demo">
-                <p>Google AdSense Banner Ad</p>
-                <small>728x90 or Responsive</small>
+    <div class="container">
+        <div class="hero">
+            <h1>Convert Currencies Instantly</h1>
+            <p>Real-time exchange rates for 150+ world currencies</p>
+        </div>
+
+        <div class="features">
+            <div class="feature">✓ 100% Free to Use</div>
+            <div class="feature">✓ No Registration Required</div>
+            <div class="feature">✓ No Contact Info Needed</div>
+        </div>
+
+        <div class="converter-card">
+            <div class="input-group">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" placeholder="Enter amount" value="1" min="0" step="0.01">
             </div>
+            
+            <div class="currency-row">
+                <div class="input-group">
+                    <label for="fromCurrency">From</label>
+                    <select id="fromCurrency"></select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="toCurrency">To</label>
+                    <select id="toCurrency"></select>
+                </div>
+            </div>
+
+            <div class="result" id="result">
+                1 USD = 0.85 EUR
+            </div>
+            
+            <div class="update-time" id="updateTime">
+                Last updated: Loading...
+            </div>
+        </div>
+
+        <div class="popular-conversions">
+            <h2>Popular Currency Conversions</h2>
+            <div class="conversion-grid">
+                <div class="conversion-item" onclick="setConversion('USD', 'EUR')">USD to EUR</div>
+                <div class="conversion-item" onclick="setConversion('GBP', 'USD')">GBP to USD</div>
+                <div class="conversion-item" onclick="setConversion('USD', 'JPY')">USD to JPY</div>
+                <div class="conversion-item" onclick="setConversion('EUR', 'GBP')">EUR to GBP</div>
+                <div class="conversion-item" onclick="setConversion('USD', 'CAD')">USD to CAD</div>
+                <div class="conversion-item" onclick="setConversion('AUD', 'USD')">AUD to USD</div>
+            </div>
+        </div>
+
+        <div class="rates-table">
+            <h2>Live Exchange Rates (Base: USD)</h2>
+            <table id="ratesTable">
+                <thead>
+                    <tr>
+                        <th>Currency</th>
+                        <th>Code</th>
+                        <th>Rate</th>
+                        <th>Change</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td colspan="4">Loading exchange rates...</td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="info-grid">
+            <div class="info-card">
+                <h4>🎯 100% Free Forever</h4>
+                <p>No hidden fees, no subscriptions, no premium tiers. Our currency converter is completely free to use, always.</p>
+            </div>
+            <div class="info-card">
+                <h4>⚡ No Registration</h4>
+                <p>Start converting instantly. No account creation, no email required, no contact information needed.</p>
+            </div>
+            <div class="info-card">
+                <h4>📊 Real-Time Rates</h4>
+                <p>Live exchange rates updated every hour from reliable financial data sources for accurate conversions.</p>
+            </div>
+            <div class="info-card">
+                <h4>🌍 150+ Currencies</h4>
+                <p>Convert between all major world currencies including USD, EUR, GBP, JPY, and many more.</p>
+            </div>
+            <div class="info-card">
+                <h4>🔒 Private & Secure</h4>
+                <p>Your conversion data stays in your browser. We don't track, store, or share your transaction information.</p>
+            </div>
+            <div class="info-card">
+                <h4>📱 Mobile Friendly</h4>
+                <p>Access our currency converter from any device - desktop, tablet, or smartphone. Works everywhere.</p>
+            </div>
+        </div>
+
+        <div class="faq-section">
+            <h3>Frequently Asked Questions</h3>
+            
+            <div class="faq-item">
+                <h4>How accurate are the exchange rates?</h4>
+                <p>Our exchange rates are sourced from reliable financial data providers and are updated regularly to ensure accuracy.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Is this currency converter free to use?</h4>
+                <p>Yes! Our currency converter is 100% free to use, forever. No registration, no email required, no contact information needed. Just visit and start converting instantly.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Do I need to create an account or register?</h4>
+                <p>No! You can start using the converter immediately without creating an account, providing an email, or sharing any personal information. No sign-up required.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>How often are rates updated?</h4>
+                <p>Exchange rates are updated every hour to provide you with the most current conversion rates.</p>
+            </div>
+
+            <div class="faq-item">
+                <h4>Can I use this for business transactions?</h4>
+                <p>This tool is for informational purposes. For actual currency exchange, please consult your bank or financial institution.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Free Real-Time Currency Converter</h2>
+            <p>Welcome to QuickCurrency.net, your trusted source for instant, accurate currency conversion. Whether you're planning international travel, shopping from overseas websites, conducting global business, or tracking forex markets, our free currency converter provides real-time exchange rates for over 150 world currencies.</p>
+
+            <h3>Why Use QuickCurrency.net?</h3>
+            <p>Our currency converter stands out from other online tools with several key advantages. First, we're completely free with no hidden fees, premium tiers, or subscription charges. You don't need to create an account, provide an email address, or share any personal information. Simply visit our site, enter your amount, select your currencies, and get instant results.</p>
+            
+            <p>We update our exchange rates hourly using data from trusted financial sources, ensuring you always have access to current market rates. Our platform supports all major currencies including US Dollar (USD), Euro (EUR), British Pound (GBP), Japanese Yen (JPY), Canadian Dollar (CAD), Australian Dollar (AUD), and Swiss Franc (CHF), plus over 140 additional currencies from around the world.</p>
+
+            <h3>How to Use Our Currency Converter</h3>
+            <p>Using our currency conversion tool is incredibly simple. Enter the amount you want to convert in the input field above, select your source currency from the first dropdown menu, then choose your target currency from the second dropdown. The converted amount appears instantly, updated with the latest exchange rates. You can convert any amount between any two supported currencies with just a few clicks.</p>
+
+            <h3>Understanding Exchange Rates</h3>
+            <p>Exchange rates represent the value of one currency relative to another and fluctuate constantly based on global economic factors, market demand, geopolitical events, and central bank policies. The rates displayed on QuickCurrency.net are mid-market rates for informational purposes. When conducting actual currency exchange transactions through banks, credit cards, or money transfer services, you may encounter slightly different rates that include service fees or margins.</p>
+
+            <h3>Who Benefits from Our Service</h3>
+            <p>International travelers use our converter to budget trips, compare prices, and avoid unfavorable exchange rates at airports and tourist areas. Online shoppers check prices from international retailers to understand exact costs in their home currency. Business professionals managing international transactions, freelancers working with overseas clients, and investors tracking forex markets all rely on quick access to current exchange rates. Students studying abroad and their families also find our tool helpful for managing expenses and money transfers.</p>
+
+            <h3>Popular Currency Pairs</h3>
+            <p>Some of the most frequently converted currency pairs on our platform include USD to EUR (US Dollar to Euro), GBP to USD (British Pound to US Dollar), USD to JPY (US Dollar to Japanese Yen), EUR to GBP (Euro to British Pound), and USD to CAD (US Dollar to Canadian Dollar). We also see high volume for conversions involving the Australian Dollar (AUD), Swiss Franc (CHF), Chinese Yuan (CNY), Indian Rupee (INR), and Mexican Peso (MXN).</p>
+
+            <h3>Mobile-Friendly Currency Conversion</h3>
+            <p>QuickCurrency.net works seamlessly on all devices including desktop computers, tablets, and smartphones. Our responsive design ensures you can convert currencies on the go, whether you're at the airport, in a store, or researching online. No app download required — simply visit our website from any device with an internet connection.</p>
+
+            <h3>Privacy and Security</h3>
+            <p>We respect your privacy and don't track your conversion history or collect personal information. You can use our currency converter with complete confidence that your financial research remains private. For more details, please read our <a href="/privacy-policy.html" style="color: #667eea;">Privacy Policy</a>.</p>
+
+            <h3>Start Converting Currencies Now</h3>
+            <p>Ready to convert currencies? Use our free tool above to get instant, accurate exchange rates for any currency pair. Whether you need to convert $100 USD to Euros, 500 GBP to US Dollars, or any other combination, QuickCurrency.net delivers fast results you can trust.</p>
         </div>
     </div>
 
-    <!-- Main Content -->
-    <main>
-        <div class="container">
-            <!-- Hero Section -->
-            <section class="hero" id="converter">
-                <h2>Convert Currencies Instantly</h2>
-                <p class="subtitle">Real-time exchange rates for 150+ world currencies</p>
-                
-                <!-- Free Badge -->
-                <div class="free-badge-container">
-                    <span class="badge badge-success"><i class="fas fa-check-circle"></i> 100% Free to Use</span>
-                    <span class="badge badge-primary"><i class="fas fa-shield-alt"></i> No Registration Required</span>
-                    <span class="badge badge-info"><i class="fas fa-user-secret"></i> No Contact Info Needed</span>
-                </div>
-                
-                <!-- Currency Converter Card -->
-                <div class="converter-card">
-                    <div class="converter-row">
-                        <!-- From Currency -->
-                        <div class="currency-input-group">
-                            <label for="fromAmount">Amount</label>
-                            <div class="input-with-currency">
-                                <input type="number" id="fromAmount" value="1" min="0" step="0.01">
-                                <select id="fromCurrency" class="currency-select">
-                                    <option value="USD" selected>USD - US Dollar</option>
-                                    <option value="EUR">EUR - Euro</option>
-                                    <option value="GBP">GBP - British Pound</option>
-                                    <option value="JPY">JPY - Japanese Yen</option>
-                                    <option value="AUD">AUD - Australian Dollar</option>
-                                    <option value="CAD">CAD - Canadian Dollar</option>
-                                    <option value="CHF">CHF - Swiss Franc</option>
-                                    <option value="CNY">CNY - Chinese Yuan</option>
-                                    <option value="INR">INR - Indian Rupee</option>
-                                    <option value="MXN">MXN - Mexican Peso</option>
-                                    <option value="BRL">BRL - Brazilian Real</option>
-                                    <option value="ZAR">ZAR - South African Rand</option>
-                                    <option value="SGD">SGD - Singapore Dollar</option>
-                                    <option value="HKD">HKD - Hong Kong Dollar</option>
-                                    <option value="SEK">SEK - Swedish Krona</option>
-                                    <option value="NOK">NOK - Norwegian Krone</option>
-                                    <option value="DKK">DKK - Danish Krone</option>
-                                    <option value="NZD">NZD - New Zealand Dollar</option>
-                                    <option value="KRW">KRW - South Korean Won</option>
-                                    <option value="TRY">TRY - Turkish Lira</option>
-                                    <option value="RUB">RUB - Russian Ruble</option>
-                                    <option value="PLN">PLN - Polish Zloty</option>
-                                    <option value="THB">THB - Thai Baht</option>
-                                    <option value="MYR">MYR - Malaysian Ringgit</option>
-                                    <option value="IDR">IDR - Indonesian Rupiah</option>
-                                    <option value="PHP">PHP - Philippine Peso</option>
-                                    <option value="CZK">CZK - Czech Koruna</option>
-                                    <option value="ILS">ILS - Israeli Shekel</option>
-                                    <option value="AED">AED - UAE Dirham</option>
-                                    <option value="SAR">SAR - Saudi Riyal</option>
-                                    <option value="DOP">DOP - Dominican Peso</option>
-                                </select>
-                            </div>
-                        </div>
-
-                        <!-- Swap Button -->
-                        <button class="swap-btn" id="swapBtn" title="Swap currencies">
-                            <i class="fas fa-exchange-alt"></i>
-                        </button>
-
-                        <!-- To Currency -->
-                        <div class="currency-input-group">
-                            <label for="toAmount">Converted Amount</label>
-                            <div class="input-with-currency">
-                                <input type="number" id="toAmount" readonly>
-                                <select id="toCurrency" class="currency-select">
-                                    <option value="USD">USD - US Dollar</option>
-                                    <option value="EUR" selected>EUR - Euro</option>
-                                    <option value="GBP">GBP - British Pound</option>
-                                    <option value="JPY">JPY - Japanese Yen</option>
-                                    <option value="AUD">AUD - Australian Dollar</option>
-                                    <option value="CAD">CAD - Canadian Dollar</option>
-                                    <option value="CHF">CHF - Swiss Franc</option>
-                                    <option value="CNY">CNY - Chinese Yuan</option>
-                                    <option value="INR">INR - Indian Rupee</option>
-                                    <option value="MXN">MXN - Mexican Peso</option>
-                                    <option value="BRL">BRL - Brazilian Real</option>
-                                    <option value="ZAR">ZAR - South African Rand</option>
-                                    <option value="SGD">SGD - Singapore Dollar</option>
-                                    <option value="HKD">HKD - Hong Kong Dollar</option>
-                                    <option value="SEK">SEK - Swedish Krona</option>
-                                    <option value="NOK">NOK - Norwegian Krone</option>
-                                    <option value="DKK">DKK - Danish Krone</option>
-                                    <option value="NZD">NZD - New Zealand Dollar</option>
-                                    <option value="KRW">KRW - South Korean Won</option>
-                                    <option value="TRY">TRY - Turkish Lira</option>
-                                    <option value="RUB">RUB - Russian Ruble</option>
-                                    <option value="PLN">PLN - Polish Zloty</option>
-                                    <option value="THB">THB - Thai Baht</option>
-                                    <option value="MYR">MYR - Malaysian Ringgit</option>
-                                    <option value="IDR">IDR - Indonesian Rupiah</option>
-                                    <option value="PHP">PHP - Philippine Peso</option>
-                                    <option value="CZK">CZK - Czech Koruna</option>
-                                    <option value="ILS">ILS - Israeli Shekel</option>
-                                    <option value="AED">AED - UAE Dirham</option>
-                                    <option value="SAR">SAR - Saudi Riyal</option>
-                                    <option value="DOP">DOP - Dominican Peso</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Exchange Rate Info -->
-                    <div class="rate-info" id="rateInfo">
-                        <i class="fas fa-info-circle"></i>
-                        <span id="rateText">1 USD = 0.85 EUR</span>
-                        <small id="lastUpdate">Last updated: Loading...</small>
-                    </div>
-
-                    <!-- Convert Button -->
-                    <button class="convert-btn" id="convertBtn">
-                        <i class="fas fa-sync-alt"></i> Convert Now
-                    </button>
-                </div>
-            </section>
-
-            <!-- Sidebar Ad (Left) for Desktop -->
-            <div class="ad-sidebar ad-sidebar-left">
-                <div class="ad-placeholder">
-                    <div class="ad-label">Advertisement</div>
-                    <div class="ad-demo">
-                        <p>AdSense</p>
-                        <small>Sidebar</small>
-                        <small>160x600</small>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sidebar Ad (Right) for Desktop -->
-            <div class="ad-sidebar ad-sidebar-right">
-                <div class="ad-placeholder">
-                    <div class="ad-label">Advertisement</div>
-                    <div class="ad-demo">
-                        <p>AdSense</p>
-                        <small>Sidebar</small>
-                        <small>160x600</small>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Popular Conversions Section -->
-            <section class="popular-section" id="popular">
-                <h3><i class="fas fa-fire"></i> Popular Currency Conversions</h3>
-                <div class="popular-grid" id="popularGrid">
-                    <div class="popular-card skeleton"></div>
-                    <div class="popular-card skeleton"></div>
-                    <div class="popular-card skeleton"></div>
-                    <div class="popular-card skeleton"></div>
-                    <div class="popular-card skeleton"></div>
-                    <div class="popular-card skeleton"></div>
-                </div>
-            </section>
-
-            <!-- Middle Banner Ad -->
-            <div class="ad-container ad-banner-middle">
-                <div class="ad-placeholder">
-                    <div class="ad-label">Advertisement</div>
-                    <div class="ad-demo">
-                        <p>Google AdSense Banner Ad</p>
-                        <small>728x90 or Responsive</small>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Live Exchange Rates Table -->
-            <section class="rates-section" id="rates">
-                <h3><i class="fas fa-chart-line"></i> Live Exchange Rates (Base: USD)</h3>
-                <div class="rates-table-container">
-                    <table class="rates-table" id="ratesTable">
-                        <thead>
-                            <tr>
-                                <th>Currency</th>
-                                <th>Code</th>
-                                <th>Rate</th>
-                                <th>Change</th>
-                            </tr>
-                        </thead>
-                        <tbody id="ratesTableBody">
-                            <tr><td colspan="4" class="loading">Loading exchange rates...</td></tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-
-            <!-- About/Info Section -->
-            <section class="info-section" id="about">
-                <h3><i class="fas fa-info-circle"></i> About Currency Conversion</h3>
-                <div class="info-grid">
-                    <div class="info-card">
-                        <i class="fas fa-gift"></i>
-                        <h4>100% Free Forever</h4>
-                        <p>No hidden fees, no subscriptions, no premium tiers. Our currency converter is completely free to use, always.</p>
-                    </div>
-                    <div class="info-card">
-                        <i class="fas fa-user-lock"></i>
-                        <h4>No Registration</h4>
-                        <p>Start converting instantly. No account creation, no email required, no contact information needed.</p>
-                    </div>
-                    <div class="info-card">
-                        <i class="fas fa-clock"></i>
-                        <h4>Real-Time Rates</h4>
-                        <p>Live exchange rates updated every hour from reliable financial data sources for accurate conversions.</p>
-                    </div>
-                    <div class="info-card">
-                        <i class="fas fa-globe"></i>
-                        <h4>150+ Currencies</h4>
-                        <p>Convert between all major world currencies including USD, EUR, GBP, JPY, and many more.</p>
-                    </div>
-                    <div class="info-card">
-                        <i class="fas fa-shield-alt"></i>
-                        <h4>Private & Secure</h4>
-                        <p>Your conversion data stays in your browser. We don't track, store, or share your transaction information.</p>
-                    </div>
-                    <div class="info-card">
-                        <i class="fas fa-mobile-alt"></i>
-                        <h4>Mobile Friendly</h4>
-                        <p>Access our currency converter from any device - desktop, tablet, or smartphone. Works everywhere.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Bottom Banner Ad -->
-            <div class="ad-container ad-banner-bottom">
-                <div class="ad-placeholder">
-                    <div class="ad-label">Advertisement</div>
-                    <div class="ad-demo">
-                        <p>Google AdSense Banner Ad</p>
-                        <small>728x90 or Responsive</small>
-                    </div>
-                </div>
-            </div>
-
-            <!-- FAQ Section for SEO -->
-            <section class="faq-section">
-                <h3><i class="fas fa-question-circle"></i> Frequently Asked Questions</h3>
-                <div class="faq-grid">
-                    <div class="faq-item">
-                        <h4>How accurate are the exchange rates?</h4>
-                        <p>Our exchange rates are sourced from reliable financial data providers and are updated regularly to ensure accuracy.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h4>Is this currency converter free to use?</h4>
-                        <p>Yes! Our currency converter is 100% free to use, forever. No registration, no email required, no contact information needed. Just visit and start converting instantly.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h4>Do I need to create an account or register?</h4>
-                        <p>No! You can start using the converter immediately without creating an account, providing an email, or sharing any personal information. No sign-up required.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h4>How often are rates updated?</h4>
-                        <p>Exchange rates are updated every hour to provide you with the most current conversion rates.</p>
-                    </div>
-                    <div class="faq-item">
-                        <h4>Can I use this for business transactions?</h4>
-                        <p>This tool is for informational purposes. For actual currency exchange, please consult your bank or financial institution.</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- NEW CONTENT SECTION -->
-            <section style="max-width: 1000px; margin: 50px auto; padding: 20px; line-height: 1.6;">
-                <h2>Free Real-Time Currency Converter</h2>
-                <p>Welcome to QuickCurrency.net, your trusted source for instant, accurate currency conversion. Whether you're planning international travel, shopping from overseas websites, conducting global business, or tracking forex markets, our free currency converter provides real-time exchange rates for over 150 world currencies.</p>
-
-                <h2>Why Use QuickCurrency.net?</h2>
-                <p>Our currency converter stands out from other online tools with several key advantages. First, we're completely free with no hidden fees, premium tiers, or subscription charges. You don't need to create an account, provide an email address, or share any personal information. Simply visit our site, enter your amount, select your currencies, and get instant results.</p>
-                
-                <p>We update our exchange rates hourly using data from trusted financial sources, ensuring you always have access to current market rates. Our platform supports all major currencies including US Dollar (USD), Euro (EUR), British Pound (GBP), Japanese Yen (JPY), Canadian Dollar (CAD), Australian Dollar (AUD), and Swiss Franc (CHF), plus over 140 additional currencies from around the world.</p>
-
-                <h2>How to Use Our Currency Converter</h2>
-                <p>Using our currency conversion tool is incredibly simple. Enter the amount you want to convert in the input field above, select your source currency from the first dropdown menu, then choose your target currency from the second dropdown. The converted amount appears instantly, updated with the latest exchange rates. You can convert any amount between any two supported currencies with just a few clicks.</p>
-
-                <h2>Understanding Exchange Rates</h2>
-                <p>Exchange rates represent the value of one currency relative to another and fluctuate constantly based on global economic factors, market demand, geopolitical events, and central bank policies. The rates displayed on QuickCurrency.net are mid-market rates for informational purposes. When conducting actual currency exchange transactions through banks, credit cards, or money transfer services, you may encounter slightly different rates that include service fees or margins.</p>
-
-                <h2>Who Benefits from Our Service</h2>
-                <p>International travelers use our converter to budget trips, compare prices, and avoid unfavorable exchange rates at airports and tourist areas. Online shoppers check prices from international retailers to understand exact costs in their home currency. Business professionals managing international transactions, freelancers working with overseas clients, and investors tracking forex markets all rely on quick access to current exchange rates. Students studying abroad and their families also find our tool helpful for managing expenses and money transfers.</p>
-
-                <h2>Popular Currency Pairs</h2>
-                <p>Some of the most frequently converted currency pairs on our platform include USD to EUR (US Dollar to Euro), GBP to USD (British Pound to US Dollar), USD to JPY (US Dollar to Japanese Yen), EUR to GBP (Euro to British Pound), and USD to CAD (US Dollar to Canadian Dollar). We also see high volume for conversions involving the Australian Dollar (AUD), Swiss Franc (CHF), Chinese Yuan (CNY), Indian Rupee (INR), and Mexican Peso (MXN).</p>
-
-                <h2>Mobile-Friendly Currency Conversion</h2>
-                <p>QuickCurrency.net works seamlessly on all devices including desktop computers, tablets, and smartphones. Our responsive design ensures you can convert currencies on the go, whether you're at the airport, in a store, or researching online. No app download required – simply visit our website from any device with an internet connection.</p>
-
-                <h2>Privacy and Security</h2>
-                <p>We respect your privacy and don't track your conversion history or collect personal information. You can use our currency converter with complete confidence that your financial research remains private. For more details, please read our <a href="/privacy.html">Privacy Policy</a>.</p>
-
-                <h2>Start Converting Currencies Now</h2>
-                <p>Ready to convert currencies? Use our free tool above to get instant, accurate exchange rates for any currency pair. Whether you need to convert $100 USD to Euros, £500 GBP to US Dollars, or any other combination, QuickCurrency.net delivers fast results you can trust.</p>
-            </section>
-
-        </div>
-    </main>
-
-    <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>QuickCurrency.net</h4>
-                    <p>Your trusted source for real-time currency conversion and exchange rates.</p>
-                    <p><strong>100% Free • No Registration • No Contact Info Required</strong></p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#converter">Currency Converter</a></li>
-                        <li><a href="#rates">Exchange Rates</a></li>
-                        <li><a href="#popular">Popular Conversions</a></li>
-                        <li><a href="/about.html">About Us</a></li>
-                        <li><a href="/contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Popular Pairs</h4>
-                    <ul>
-                        <li><a href="#converter">USD to EUR</a></li>
-                        <li><a href="#converter">GBP to USD</a></li>
-                        <li><a href="#converter">EUR to GBP</a></li>
-                        <li><a href="#converter">USD to JPY</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="/privacy.html">Privacy Policy</a></li>
-                        <li><a href="/terms-of-service.html">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 QuickCurrency.net - All Rights Reserved</p>
-                <p class="disclaimer">Disclaimer: Exchange rates are for informational purposes only and may differ from actual rates offered by financial institutions.</p>
+            <p>&copy; 2026 QuickCurrency.net - All Rights Reserved</p>
+            <div style="margin-top: 15px;">
+                <a href="/privacy-policy.html">Privacy Policy</a>
+                <a href="/terms-of-service.html">Terms of Service</a>
+                <a href="/about.html">About Us</a>
+                <a href="/contact.html">Contact</a>
             </div>
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script>
+        const currencies = {
+            'USD': 'US Dollar', 'EUR': 'Euro', 'GBP': 'British Pound', 'JPY': 'Japanese Yen',
+            'CAD': 'Canadian Dollar', 'AUD': 'Australian Dollar', 'CHF': 'Swiss Franc',
+            'CNY': 'Chinese Yuan', 'INR': 'Indian Rupee', 'MXN': 'Mexican Peso'
+        };
+
+        const exchangeRates = {
+            'USD': 1, 'EUR': 0.85, 'GBP': 0.73, 'JPY': 110.0,
+            'CAD': 1.25, 'AUD': 1.35, 'CHF': 0.92, 'CNY': 6.45,
+            'INR': 74.5, 'MXN': 20.0
+        };
+
+        function populateCurrencies() {
+            const fromSelect = document.getElementById('fromCurrency');
+            const toSelect = document.getElementById('toCurrency');
+            
+            for (let code in currencies) {
+                fromSelect.innerHTML += `<option value="${code}">${code} - ${currencies[code]}</option>`;
+                toSelect.innerHTML += `<option value="${code}">${code} - ${currencies[code]}</option>`;
+            }
+            
+            fromSelect.value = 'USD';
+            toSelect.value = 'EUR';
+        }
+
+        function convertCurrency() {
+            const amount = parseFloat(document.getElementById('amount').value);
+            const from = document.getElementById('fromCurrency').value;
+            const to = document.getElementById('toCurrency').value;
+            
+            if (isNaN(amount) || amount < 0) {
+                document.getElementById('result').textContent = 'Please enter a valid amount';
+                return;
+            }
+            
+            const result = (amount / exchangeRates[from]) * exchangeRates[to];
+            document.getElementById('result').textContent = 
+                `${amount.toFixed(2)} ${from} = ${result.toFixed(2)} ${to}`;
+        }
+
+        function setConversion(from, to) {
+            document.getElementById('fromCurrency').value = from;
+            document.getElementById('toCurrency').value = to;
+            convertCurrency();
+        }
+
+        function updateRatesTable() {
+            const tbody = document.querySelector('#ratesTable tbody');
+            tbody.innerHTML = '';
+            
+            for (let code in currencies) {
+                if (code !== 'USD') {
+                    const rate = exchangeRates[code];
+                    const change = ((Math.random() - 0.5) * 2).toFixed(2);
+                    const changeClass = change >= 0 ? 'positive' : 'negative';
+                    tbody.innerHTML += `
+                        <tr>
+                            <td>${currencies[code]}</td>
+                            <td>${code}</td>
+                            <td>${rate.toFixed(4)}</td>
+                            <td style="color: ${change >= 0 ? 'green' : 'red'}">${change >= 0 ? '+' : ''}${change}%</td>
+                        </tr>
+                    `;
+                }
+            }
+        }
+
+        document.getElementById('amount').addEventListener('input', convertCurrency);
+        document.getElementById('fromCurrency').addEventListener('change', convertCurrency);
+        document.getElementById('toCurrency').addEventListener('change', convertCurrency);
+
+        populateCurrencies();
+        convertCurrency();
+        updateRatesTable();
+        
+        document.getElementById('updateTime').textContent = 
+            `Last updated: ${new Date().toLocaleString()}`;
+    </script>
 </body>
 </html>
