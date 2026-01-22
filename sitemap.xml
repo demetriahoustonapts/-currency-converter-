@@ -13,6 +13,32 @@
     <priority>0.9</priority>
   </url>
 
+  <!-- Trust pages -->
+  <url>
+    <loc>https://quickcurrency.net/about.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://quickcurrency.net/contact.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://quickcurrency.net/privacy.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <url>
+    <loc>https://quickcurrency.net/terms-of-service.html</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+  </url>
+
+  <!-- Blog posts -->
   <url><loc>https://quickcurrency.net/blog/currency-exchange-guide-for-travelers.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://quickcurrency.net/blog/10-currency-exchange-mistakes-to-avoid.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://quickcurrency.net/blog/how-exchange-rates-work-beginners-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -30,4 +56,5 @@
   <url><loc>https://quickcurrency.net/blog/understanding-currency-exchange-fees.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 
 </urlset>
+
 
