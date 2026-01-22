@@ -1,233 +1,214 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about QuickCurrency.net - your trusted source for free, accurate currency conversion with real-time exchange rates.">
-    <link rel="canonical" href="https://www.quickcurrency.net/about.html">
-    <title>About Us - QuickCurrency.net</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        header {
-            background: white;
-            padding: 20px 0;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 40px;
-        }
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-        }
-        nav a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        nav a:hover {
-            color: #764ba2;
-        }
-        .ad-space {
-            background: #f5f5f5;
-            border: 2px dashed #ccc;
-            padding: 20px;
-            text-align: center;
-            color: #999;
-            font-weight: 600;
-            margin: 20px auto;
-            border-radius: 5px;
-        }
-        .ad-728x90 {
-            max-width: 728px;
-            height: 90px;
-            line-height: 90px;
-        }
-        .ad-300x250 {
-            max-width: 300px;
-            height: 250px;
-            line-height: 250px;
-        }
-        .content-card {
-            background: white;
-            border-radius: 20px;
-            padding: 50px;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            margin: 40px auto;
-        }
-        h1 {
-            color: #667eea;
-            font-size: 2.5em;
-            margin-bottom: 20px;
-        }
-        h2 {
-            color: #764ba2;
-            font-size: 1.8em;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-        p {
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-        ul {
-            margin: 20px 0;
-            padding-left: 30px;
-        }
-        li {
-            margin-bottom: 10px;
-        }
-        .highlight-box {
-            background: #e8f4f8;
-            border-left: 4px solid #667eea;
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 5px;
-        }
-        footer {
-            background: rgba(255,255,255,0.1);
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 60px;
-        }
-        footer a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        @media (max-width: 768px) {
-            .content-card {
-                padding: 30px 20px;
-            }
-            h1 {
-                font-size: 2em;
-            }
-            .ad-728x90 {
-                max-width: 100%;
-                height: auto;
-                min-height: 90px;
-            }
-        }
-    </style>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About — QuickCurrency.net</title>
+  <meta name="description" content="About QuickCurrency.net: our mission, what makes us different, and how we support the site." />
+
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a33;
+      --text:#eaf0ff;
+      --muted:#b8c3e6;
+      --link:#7db3ff;
+      --border:rgba(255,255,255,.10);
+      --accent:#2dd4bf;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(45,212,191,.25), transparent 55%),
+                  radial-gradient(900px 500px at 90% 0%, rgba(125,179,255,.25), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.7;
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px; margin:0 auto; padding:22px}
+    header{
+      display:flex; gap:14px; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      border-bottom:1px solid var(--border);
+    }
+    .brand{
+      font-weight:800; letter-spacing:.2px;
+      display:flex; gap:10px; align-items:center;
+    }
+    .dot{
+      width:12px; height:12px; border-radius:999px; background:var(--accent);
+      box-shadow:0 0 0 4px rgba(45,212,191,.15);
+    }
+    nav{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    nav a{
+      padding:8px 10px;
+      border:1px solid transparent;
+      border-radius:10px;
+      color:var(--text);
+      opacity:.95;
+    }
+    nav a:hover{border-color:var(--border); background:rgba(255,255,255,.05); text-decoration:none}
+    main{padding:26px 0}
+    .card{
+      background:rgba(15,26,51,.85);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    h1{margin:0 0 8px; font-size:28px}
+    h2{margin:18px 0 8px; font-size:18px}
+    p{margin:0 0 12px}
+    ul{margin:8px 0 0; padding-left:18px}
+    .muted{color:var(--muted)}
+    .note{
+      margin-top:12px;
+      padding:12px 14px;
+      border-left:4px solid var(--accent);
+      background:rgba(45,212,191,.08);
+      border-radius:10px;
+      color:var(--muted);
+    }
+    footer{
+      margin-top:18px;
+      padding-top:16px;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      font-size:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 18px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .footerlinks{display:flex; flex-wrap:wrap; gap:12px}
+  </style>
 </head>
+
 <body>
+  <div class="wrap">
     <header>
-        <nav>
-            <a href="/">Home</a>
-            <a href="/blog/">Blog</a>
-            <a href="/about.html">About</a>
-            <a href="/contact.html">Contact</a>
-        </nav>
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <a href="/" style="color:var(--text); text-decoration:none;">QuickCurrency.net</a>
+      </div>
+      <nav aria-label="Site navigation">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about.html" aria-current="page">About</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms-of-service.html">Terms</a>
+      </nav>
     </header>
 
-    <!-- Top Ad Space -->
-    <div class="ad-space ad-728x90">Advertisement - 728x90</div>
+    <main>
+      <div class="card">
+        <h1>About QuickCurrency.net</h1>
+        <p class="muted">
+          Fast, accurate, and free currency conversion — with practical guides to help you understand exchange rates and avoid unnecessary fees.
+        </p>
 
-    <div class="container">
-        <div class="content-card">
-            <h1>About QuickCurrency.net</h1>
+        <p>
+          Welcome to QuickCurrency.net, your trusted source for fast, accurate, and free currency conversion.
+          We created this platform to solve a simple problem: travelers, businesses, and individuals needed an easy way to check
+          exchange rates without complicated sign-ups, hidden fees, or confusing interfaces.
+        </p>
 
-            <p>Welcome to QuickCurrency.net, your trusted source for fast, accurate, and free currency conversion. We created this platform to solve a simple problem: travelers, businesses, and individuals needed an easy way to check exchange rates without complicated sign-ups, hidden fees, or confusing interfaces.</p>
+        <h2>Our Mission</h2>
+        <p>
+          Our mission is to provide the most accessible, accurate, and user-friendly currency conversion tool on the internet.
+          We believe financial information should be free, transparent, and available to everyone—whether you're planning a vacation,
+          managing international business transactions, or simply curious about exchange rates.
+        </p>
 
-            <h2>Our Mission</h2>
+        <h2>What Makes Us Different</h2>
+        <ul>
+          <li><strong>100% Free Forever:</strong> No hidden fees, premium tiers, or subscription charges.</li>
+          <li><strong>No Registration Required:</strong> Start converting instantly without creating an account.</li>
+          <li><strong>Real-Time Data:</strong> Exchange rates are updated regularly from reliable financial data sources.</li>
+          <li><strong>Privacy First:</strong> We don’t track conversion history or collect unnecessary personal data.</li>
+          <li><strong>Mobile Optimized:</strong> Works smoothly on desktop, tablet, and mobile.</li>
+          <li><strong>150+ Currencies:</strong> Support for major and many minor currencies.</li>
+        </ul>
 
-            <p>Our mission is to provide the most accessible, accurate, and user-friendly currency conversion tool on the internet. We believe financial information should be free, transparent, and available to everyone—whether you're planning a vacation, managing international business transactions, or simply curious about exchange rates.</p>
+        <h2>Who We Serve</h2>
+        <p>QuickCurrency.net is designed for anyone who needs quick access to accurate exchange rates:</p>
+        <ul>
+          <li><strong>International Travelers:</strong> Plan budgets and avoid costly exchange mistakes</li>
+          <li><strong>Online Shoppers:</strong> Understand real costs when shopping internationally</li>
+          <li><strong>Business Professionals:</strong> Quick reference for international transactions</li>
+          <li><strong>Freelancers:</strong> Convert client payments and manage multi-currency income</li>
+          <li><strong>Students Abroad:</strong> Track expenses across borders</li>
+          <li><strong>Forex Enthusiasts:</strong> Follow currency market movements</li>
+        </ul>
 
-            <!-- Mid-Content Ad Space -->
-            <div class="ad-space ad-300x250" style="margin: 40px auto;">Advertisement - 300x250</div>
+        <h2>Our Commitment to Accuracy</h2>
+        <p>
+          Exchange rates are sourced from trusted financial data providers and updated hourly.
+          While we strive for maximum accuracy, rates shown are for informational purposes.
+          Actual transaction rates may vary due to bank fees, service charges, or timing differences.
+          Always confirm rates with your financial institution before making transactions.
+        </p>
 
-            <h2>What Makes Us Different</h2>
+        <h2>Educational Resources</h2>
+        <p>
+          Beyond our currency converter, we publish educational content through our
+          <a href="/blog/">blog</a> covering:
+        </p>
+        <ul>
+          <li>How exchange rates work and what influences them</li>
+          <li>Best practices for exchanging currency while traveling</li>
+          <li>Common mistakes that cost people money</li>
+          <li>Digital wallets and modern payment options</li>
+          <li>Country- and route-specific travel money guides</li>
+        </ul>
 
-            <ul>
-                <li><strong>100% Free Forever:</strong> No hidden fees, premium tiers, or subscription charges. We'll never ask for payment.</li>
-                <li><strong>No Registration Required:</strong> Start converting instantly without creating an account or providing personal information.</li>
-                <li><strong>Real-Time Data:</strong> Our exchange rates are updated regularly from reliable financial data sources to ensure accuracy.</li>
-                <li><strong>Privacy First:</strong> We don't track your conversion history or collect unnecessary personal data. Your privacy matters.</li>
-                <li><strong>Mobile Optimized:</strong> Our converter works seamlessly on any device—desktop, tablet, or smartphone.</li>
-                <li><strong>150+ Currencies:</strong> Support for all major world currencies and many minor ones.</li>
-            </ul>
+        <h2>Transparency and Trust</h2>
+        <p>
+          Our service is supported by advertising, which allows us to keep the converter free for everyone.
+          We never sell your personal data, and we don’t require you to provide personal information to use the core service.
+        </p>
+        <p>
+          For details on data handling, please read our <a href="/privacy.html">Privacy Policy</a>.
+        </p>
 
-            <h2>Who We Serve</h2>
+        <h2>Contact Us</h2>
+        <p>
+          We value feedback from our users. If you have suggestions, questions, or partnership inquiries,
+          visit our <a href="/contact.html">Contact page</a>.
+        </p>
 
-            <p>QuickCurrency.net is designed for anyone who needs quick access to accurate exchange rates:</p>
+        <h2>Looking Forward</h2>
+        <p>
+          We’re constantly improving QuickCurrency.net based on user feedback. Future enhancements may include
+          historical exchange rate charts, rate alerts, multi-currency comparison tools, and expanded educational resources.
+        </p>
 
-            <ul>
-                <li><strong>International Travelers:</strong> Plan budgets, compare costs, and avoid unfavorable airport exchange rates</li>
-                <li><strong>Online Shoppers:</strong> Understand exact costs when shopping from international retailers</li>
-                <li><strong>Business Professionals:</strong> Quick reference for international transactions and invoicing</li>
-                <li><strong>Freelancers:</strong> Convert client payments and manage multi-currency income</li>
-                <li><strong>Students Abroad:</strong> Track expenses and manage money across borders</li>
-                <li><strong>Forex Enthusiasts:</strong> Monitor currency market movements and trends</li>
-            </ul>
-
-            <div class="highlight-box">
-                <h2>Our Commitment to Accuracy</h2>
-                <p>Exchange rates are sourced from trusted financial data providers and updated hourly. While we strive for maximum accuracy, rates shown are for informational purposes. Actual transaction rates may vary slightly due to bank fees, service charges, or timing differences. Always confirm rates with your financial institution before making transactions.</p>
-            </div>
-
-            <h2>Educational Resources</h2>
-
-            <p>Beyond our currency converter, we provide comprehensive educational content through our <a href="/blog/" style="color: #667eea;">blog</a>. Our articles cover topics like:</p>
-
-            <ul>
-                <li>How exchange rates work and what influences them</li>
-                <li>Best practices for exchanging currency when traveling</li>
-                <li>Common mistakes that cost travelers money</li>
-                <li>Digital wallets and modern payment solutions</li>
-                <li>Country-specific travel money guides</li>
-            </ul>
-
-            <h2>Transparency and Trust</h2>
-
-            <p>We operate with complete transparency. Our service is supported by advertising, which allows us to keep the currency converter free for all users. We never sell your personal data, and we don't require you to provide any information to use our core service.</p>
-
-            For detailed information about how we handle data and protect your privacy, please read our <a href="https://quickcurrency.net/privacy.html">Privacy Policy</a>
-
-            <h2>Contact Us</h2>
-
-            <p>We value feedback from our users. Whether you have suggestions for improvement, questions about our service, or just want to say hello, we'd love to hear from you. Visit our <a href="/contact.html" style="color: #667eea;">Contact page</a> to get in touch.</p>
-
-            <h2>Looking Forward</h2>
-
-            <p>We're constantly working to improve QuickCurrency.net based on user feedback and emerging needs. Future enhancements may include historical exchange rate charts, rate alerts, multi-currency comparison tools, and expanded educational resources.</p>
-
-            <p>Thank you for choosing QuickCurrency.net as your currency conversion tool. We're honored to be part of your financial planning, whether you're booking a dream vacation, closing an international business deal, or simply satisfying your curiosity about global currencies.</p>
-
-            <p style="margin-top: 40px;"><strong>Start converting now:</strong> <a href="/" style="color: #667eea;">Visit our currency converter</a></p>
+        <div class="note">
+          Ready to convert? <a href="/"><strong>Start converting now →</strong></a>
         </div>
 
-        <!-- Bottom Ad Space -->
-        <div class="ad-space ad-728x90">Advertisement - 728x90</div>
-    </div>
+        <footer>
+          <div>© <span id="year"></span> QuickCurrency.net</div>
+          <div class="footerlinks">
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms-of-service.html">Terms</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+            <a href="/blog/">Blog</a>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </div>
 
-    <footer>
-        <p>&copy; 2026 QuickCurrency.net - All Rights Reserved</p>
-        <div style="margin-top: 15px;">
-                    <a href="/privacy.html">Privacy Policy</a>
-        <a href="/terms-of-service.html">Terms of Service</a>
-        <a href="/about.html">About Us</a>
-        <a href="/contact.html">Contact</a>
-        </div>
-    </footer>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
+
