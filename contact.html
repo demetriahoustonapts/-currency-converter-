@@ -1,79 +1,165 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact - QuickCurrency.net</title>
-  <meta name="description" content="Contact QuickCurrency.net for support, feedback, bug reports, and privacy requests." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — QuickCurrency.net</title>
+  <meta name="description" content="Contact QuickCurrency.net for support, feedback, privacy requests, and partnership inquiries." />
+  <style>
+    :root{
+      --bg:#0b1220;
+      --card:#0f1a33;
+      --text:#eaf0ff;
+      --muted:#b8c3e6;
+      --link:#7db3ff;
+      --border:rgba(255,255,255,.10);
+      --accent:#2dd4bf;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(45,212,191,.25), transparent 55%),
+                  radial-gradient(900px 500px at 90% 0%, rgba(125,179,255,.25), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.6;
+    }
+    a{color:var(--link); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:980px; margin:0 auto; padding:22px}
+    header{
+      display:flex; gap:14px; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      border-bottom:1px solid var(--border);
+    }
+    .brand{
+      font-weight:800; letter-spacing:.2px;
+      display:flex; gap:10px; align-items:center;
+    }
+    .dot{
+      width:12px; height:12px; border-radius:999px; background:var(--accent);
+      box-shadow:0 0 0 4px rgba(45,212,191,.15);
+    }
+    nav{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    nav a{
+      padding:8px 10px;
+      border:1px solid transparent;
+      border-radius:10px;
+      color:var(--text);
+      opacity:.95;
+    }
+    nav a:hover{border-color:var(--border); background:rgba(255,255,255,.05); text-decoration:none}
+    main{padding:26px 0}
+    .card{
+      background:rgba(15,26,51,.85);
+      border:1px solid var(--border);
+      border-radius:16px;
+      padding:20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    }
+    h1{margin:0 0 10px; font-size:28px}
+    h2{margin:18px 0 8px; font-size:18px}
+    .muted{color:var(--muted)}
+    .pill{
+      display:inline-block;
+      padding:3px 10px;
+      border:1px solid var(--border);
+      border-radius:999px;
+      font-size:12px;
+      color:var(--muted);
+      margin-left:8px;
+    }
+    ul{margin:8px 0 0; padding-left:18px}
+    footer{
+      margin-top:22px;
+      padding-top:16px;
+      border-top:1px solid var(--border);
+      color:var(--muted);
+      font-size:14px;
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px 18px;
+      align-items:center;
+      justify-content:space-between;
+    }
+    .footerlinks{display:flex; flex-wrap:wrap; gap:12px}
+    .note{
+      margin-top:12px;
+      padding:12px 14px;
+      border-left:4px solid var(--accent);
+      background:rgba(45,212,191,.08);
+      border-radius:10px;
+      color:var(--muted);
+    }
+  </style>
 </head>
-<body style="font-family: Arial, sans-serif; line-height: 1.6; margin: 0; padding: 0; color: #222;">
 
-  <header style="border-bottom: 1px solid #eee; padding: 14px 18px;">
-    <nav style="max-width: 980px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 14px; align-items: center;">
-      <a href="/" style="font-weight: 800; text-decoration: none; color: #111;">QuickCurrency.net</a>
-      <a href="/blog/" style="text-decoration: none; color: #0b57d0;">Blog</a>
-      <a href="/about.html" style="text-decoration: none; color: #0b57d0;">About</a>
-      <a href="/contact.html" style="text-decoration: none; color: #0b57d0;">Contact</a>
-      <span style="flex: 1;"></span>
-      <a href="/privacy.html" style="text-decoration: none; color: #0b57d0;">Privacy</a>
-      <a href="/terms-of-service.html" style="text-decoration: none; color: #0b57d0;">Terms</a>
-    </nav>
-  </header>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <a href="/" style="color:var(--text); text-decoration:none;">QuickCurrency.net</a>
+      </div>
+      <nav aria-label="Site navigation">
+        <a href="/">Home</a>
+        <a href="/blog/">Blog</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html" aria-current="page">Contact</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms-of-service.html">Terms</a>
+      </nav>
+    </header>
 
-  <main style="max-width: 980px; margin: 0 auto; padding: 22px 18px;">
-    <h1 style="margin: 0 0 10px;">Contact QuickCurrency.net</h1>
-    <p style="margin: 0 0 18px;">
-      Have questions, feedback, or need assistance with QuickCurrency.net? We’re here to help.
-    </p>
+    <main>
+      <div class="card">
+        <h1>Contact</h1>
+        <p class="muted">Have questions, feedback, or need help with QuickCurrency? We’re here to help.</p>
 
-    <section style="border: 1px solid #eee; border-radius: 12px; padding: 16px; background: #fafafa;">
-      <h2 style="margin: 0 0 10px; font-size: 18px;">Email</h2>
-      <p style="margin: 0;">
-        Email us at:
-        <a href="mailto:demetria.houstonapts@gmail.com" style="font-weight: 700; color: #0b57d0;">
-          demetria.houstonapts@gmail.com
-        </a>
-      </p>
-      <p style="margin: 10px 0 0; color: #444;">
-        Typical response time: <strong>24–48 hours</strong> (business days).
-        If it’s urgent, start the subject line with <strong>URGENT</strong>.
-      </p>
-    </section>
+        <h2>Email <span class="pill">reply time</span></h2>
+        <p>
+          Email us at:
+          <a href="mailto:demetria.houstonapts@gmail.com"><strong>demetria.houstonapts@gmail.com</strong></a><br />
+          Typical response time: <strong>24–48 hours</strong> (business days). If it’s urgent, start the subject line with <strong>URGENT</strong>.
+        </p>
 
-    <h2 style="margin: 22px 0 10px;">What you can contact us about</h2>
-    <ul style="margin: 0 0 18px; padding-left: 18px;">
-      <li>Technical issues or bugs with the currency converter</li>
-      <li>Questions about exchange rates or data sources</li>
-      <li>Suggestions for new features or improvements</li>
-      <li>Privacy or data concerns</li>
-      <li>General feedback</li>
-      <li>Partnership or collaboration inquiries</li>
-    </ul>
+        <h2>What you can contact us about</h2>
+        <ul>
+          <li>Technical issues or bugs with the currency converter</li>
+          <li>Questions about exchange rates or data sources</li>
+          <li>Suggestions for new features or improvements</li>
+          <li>Privacy or data concerns</li>
+          <li>General feedback</li>
+          <li>Partnership or collaboration inquiries</li>
+        </ul>
 
-    <h2 style="margin: 22px 0 10px;">Privacy requests</h2>
-    <p style="margin: 0 0 18px;">
-      For privacy-related inquiries, please include <strong>Privacy Request</strong> in your subject line.
-      See our <a href="/privacy.html" style="color:#0b57d0; font-weight:700;">Privacy Policy</a>.
-    </p>
+        <h2>Privacy requests</h2>
+        <p>
+          For privacy-related inquiries, please include <strong>Privacy Request</strong> in your subject line.
+          See our <a href="/privacy.html">Privacy Policy</a>. 
+        </p>
 
-    <hr style="border: none; border-top: 1px solid #eee; margin: 22px 0;">
+        <div class="note">
+          Tip: For the fastest help, include the page URL you were on and what device/browser you’re using.
+        </div>
 
-    <p style="margin: 0; color: #555;">
-      Thank you for using QuickCurrency.net.
-    </p>
-  </main>
+        <footer>
+          <div>© <span id="year"></span> QuickCurrency.net</div>
+          <div class="footerlinks">
+            <a href="/privacy.html">Privacy</a>
+            <a href="/terms-of-service.html">Terms</a>
+            <a href="/about.html">About</a>
+            <a href="/blog/">Blog</a>
+          </div>
+        </footer>
+      </div>
+    </main>
+  </div>
 
-  <footer style="border-top: 1px solid #eee; padding: 14px 18px; background: #fff;">
-    <div style="max-width: 980px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 14px;">
-      <a href="/" style="text-decoration: none; color: #0b57d0;">Home</a>
-      <a href="/blog/" style="text-decoration: none; color: #0b57d0;">Blog</a>
-      <a href="/about.html" style="text-decoration: none; color: #0b57d0;">About</a>
-      <a href="/contact.html" style="text-decoration: none; color: #0b57d0;">Contact</a>
-      <a href="/privacy.html" style="text-decoration: none; color: #0b57d0;">Privacy Policy</a>
-      <a href="/terms-of-service.html" style="text-decoration: none; color: #0b57d0;">Terms</a>
-    </div>
-  </footer>
-
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
 
