@@ -1,10 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
-    <loc>https://www.quickcurrency.net/</loc>
-    <lastmod>2024-12-23</lastmod>
+    <loc>https://quickcurrency.net/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <url>
+    <loc>https://quickcurrency.net/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url><loc>https://quickcurrency.net/blog/currency-exchange-guide-for-travelers.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://quickcurrency.net/blog/10-currency-exchange-mistakes-to-avoid.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://quickcurrency.net/blog/how-exchange-rates-work-beginners-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://quickcurrency.net/blog/best-travel-credit-cards-no-foreign-fees.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://quickcurrency.net/blog/airport-exchange-vs-atms-vs-banks.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://quickcurrency.net/blog/avoid-currency-exchange-scams.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://quickcurrency.net/blog/travel-money-tips-europe.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://quickcurrency.net/blog/usd-to-eur-exchange-rate-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://quickcurrency.net/blog/gbp-to-usd-exchange-rate-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://quickcurrency.net/blog/usd-to-mxn-mexico-travel-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://quickcurrency.net/blog/understanding-japanese-yen-travelers.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://quickcurrency.net/blog/what-is-forex-trading-beginners-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://quickcurrency.net/blog/calculate-exchange-rates-manually.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://quickcurrency.net/blog/digital-wallets-international-transactions.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://quickcurrency.net/blog/understanding-currency-exchange-fees.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
 </urlset>
 
