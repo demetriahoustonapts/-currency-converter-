@@ -6,36 +6,41 @@
      crossorigin="anonymous"></script>
 
 <meta charset="utf-8">
-<title>QuickCurrency | Currency Converter</title>
-<meta name="description" content="Convert currencies fast with a simple currency converter. See exchange rates and quick conversion tips.">
+<title>QuickCurrency | Currency Converter & Exchange Rate Guide</title>
+<meta name="description" content="Convert currencies and learn how exchange rates work. QuickCurrency includes a simple converter, FAQs, and tips to compare providers and avoid hidden fees.">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
-:root{--navy:#0f2a44;--red:#c62828;--bg:#f4f6f8;--card:#ffffff;--text:#1f2937;--muted:#6b7280}
+:root{--navy:#0f2a44;--red:#c62828;--bg:#f4f6f8;--card:#ffffff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb}
 *{box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;margin:0;background:var(--bg);color:var(--text)}
 header{background:var(--navy);color:#fff;padding:18px 0;border-bottom:4px solid var(--red)}
-.container{max-width:980px;margin:0 auto;padding:0 20px}
-header h1{margin:0;font-size:26px}
+.container{max-width:1040px;margin:0 auto;padding:0 20px}
+header h1{margin:0;font-size:28px}
 header p{margin:6px 0 0;opacity:.9;font-size:14px}
-nav{margin-top:10px}
-nav a{color:#fff;text-decoration:none;font-weight:600;margin-right:16px;font-size:14px}
+nav{margin-top:12px}
+nav a{color:#fff;text-decoration:none;font-weight:700;margin-right:16px;font-size:14px}
 nav a:hover{text-decoration:underline}
-.card{background:var(--card);border-radius:12px;padding:22px;margin:22px 0;box-shadow:0 4px 14px rgba(0,0,0,.08);border-left:6px solid var(--red)}
-.grid{display:grid;grid-template-columns:1fr;gap:14px}
-@media(min-width:760px){.grid{grid-template-columns:1fr 1fr}}
-label{display:block;font-weight:700;margin:10px 0 6px}
-input,select{width:100%;padding:12px;border:1px solid #d1d5db;border-radius:10px;font-size:16px;background:#fff}
+.card{background:var(--card);border-radius:14px;padding:24px;margin:22px 0;box-shadow:0 4px 14px rgba(0,0,0,.08);border-left:6px solid var(--red)}
+.grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:860px){.grid{grid-template-columns:1.15fr .85fr}}
+label{display:block;font-weight:800;margin:10px 0 6px}
+input,select{width:100%;padding:12px;border:1px solid #d1d5db;border-radius:12px;font-size:16px;background:#fff}
 .row{display:grid;grid-template-columns:1fr;gap:12px}
-@media(min-width:760px){.row{grid-template-columns:1fr 1fr}}
-.btn{display:inline-block;margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:10px;padding:12px 16px;font-weight:700;cursor:pointer}
+@media(min-width:860px){.row{grid-template-columns:1fr 1fr}}
+.btn{display:inline-block;margin-top:12px;background:var(--navy);color:#fff;border:none;border-radius:12px;padding:12px 16px;font-weight:800;cursor:pointer}
 .btn:hover{opacity:.95}
-.result{margin-top:12px;padding:14px;border-radius:10px;background:#eef2ff;border:1px solid #c7d2fe}
-.small{color:var(--muted);font-size:13px;line-height:1.6}
-footer{background:var(--navy);color:#fff;margin-top:40px;padding:26px 0}
+.result{margin-top:12px;padding:14px;border-radius:12px;background:#eef2ff;border:1px solid #c7d2fe}
+.small{color:var(--muted);font-size:13px;line-height:1.7}
+.hr{height:1px;background:var(--line);margin:18px 0}
+.badge{display:inline-block;background:#eef3fa;border:1px solid #d7e2f2;border-radius:999px;padding:6px 10px;font-size:12px;color:#334155;margin-right:8px;margin-top:8px}
+.adslot{border:2px dashed #cbd5e1;border-radius:14px;padding:18px;text-align:center;color:#64748b;margin:16px 0;background:#fff}
+h2{margin:0 0 8px;color:var(--navy);font-size:30px}
+h3{margin:16px 0 8px;color:var(--navy)}
+ul{margin:10px 0 0 18px;line-height:1.7}
+footer{background:var(--navy);color:#fff;margin-top:40px;padding:28px 0}
 footer a{color:#fff;text-decoration:none;margin-right:14px}
 footer a:hover{text-decoration:underline}
-.adslot{border:2px dashed #cbd5e1;border-radius:12px;padding:18px;text-align:center;color:#64748b;margin:18px 0;background:#fff}
 </style>
 
 </head>
@@ -44,7 +49,7 @@ footer a:hover{text-decoration:underline}
 <header>
   <div class="container">
     <h1>QuickCurrency</h1>
-    <p>Simple currency converter + exchange rate tips</p>
+    <p>Currency converter + practical exchange rate education (no hype, just clarity)</p>
     <nav>
       <a href="/index.html">Home</a>
       <a href="/about.html">About</a>
@@ -58,61 +63,109 @@ footer a:hover{text-decoration:underline}
 <div class="container">
 
   <div class="card">
-    <h2 style="margin:0 0 8px;color:var(--navy)">Currency Converter</h2>
+    <h2>Currency Converter</h2>
     <p class="small" style="margin-top:0">
-      Convert popular currencies quickly. Rates shown are estimates for informational purposes.
-      For exact rates, check your bank/payment provider.
+      Use the converter below for quick estimates, then compare your bank/card/provider for final rates and fees.
+      Exchange rates move constantly — this tool helps you understand the math and avoid surprises.
     </p>
 
-    <div class="adslot">Ad Slot (Top)</div>
+    <div class="grid">
+      <div>
+        <div class="adslot">Ad Slot (Top)</div>
 
-    <div class="row">
-      <div>
-        <label for="amount">Amount</label>
-        <input id="amount" type="number" inputmode="decimal" value="100" min="0" step="0.01">
+        <div class="row">
+          <div>
+            <label for="amount">Amount</label>
+            <input id="amount" type="number" inputmode="decimal" value="100" min="0" step="0.01">
+          </div>
+          <div>
+            <label for="rate">Exchange rate</label>
+            <input id="rate" type="number" inputmode="decimal" value="1.00" min="0" step="0.0001">
+            <div class="small">Example: If 1 USD = 0.92 EUR, enter 0.92</div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div>
+            <label for="from">From</label>
+            <select id="from">
+              <option>USD</option><option>EUR</option><option>GBP</option><option>CAD</option><option>AUD</option>
+              <option>JPY</option><option>MXN</option><option>INR</option><option>NGN</option><option>ZAR</option>
+            </select>
+          </div>
+          <div>
+            <label for="to">To</label>
+            <select id="to">
+              <option>EUR</option><option>USD</option><option>GBP</option><option>CAD</option><option>AUD</option>
+              <option>JPY</option><option>MXN</option><option>INR</option><option>NGN</option><option>ZAR</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="btn" onclick="convert()">Convert</button>
+        <div id="out" class="result" style="display:none"></div>
+
+        <div class="adslot">Ad Slot (Mid)</div>
       </div>
+
       <div>
-        <label for="rate">Exchange rate</label>
-        <input id="rate" type="number" inputmode="decimal" value="1.00" min="0" step="0.0001">
-        <div class="small">Example: If 1 USD = 0.92 EUR, enter 0.92</div>
+        <h3>Quick tips (save money)</h3>
+        <div class="badge">Compare fees</div>
+        <div class="badge">Avoid airport kiosks</div>
+        <div class="badge">Check card FX markup</div>
+        <div class="badge">Use official sources</div>
+
+        <p class="small">
+          A “good rate” can be ruined by hidden fees. Always compare the total cost:
+          rate + markup + transfer fee + conversion fee.
+        </p>
+
+        <div class="hr"></div>
+
+        <h3>How to use this tool</h3>
+        <ul class="small">
+          <li>Enter an amount, choose currencies, and add an exchange rate.</li>
+          <li>Use official or provider rates when possible.</li>
+          <li>Compare the final total after fees (banks and cards differ).</li>
+        </ul>
+
+        <div class="adslot">Ad Slot (Sidebar)</div>
       </div>
     </div>
+  </div>
 
-    <div class="row">
-      <div>
-        <label for="from">From</label>
-        <select id="from">
-          <option>USD</option><option>EUR</option><option>GBP</option><option>CAD</option><option>AUD</option>
-          <option>JPY</option><option>MXN</option><option>INR</option><option>NGN</option><option>ZAR</option>
-        </select>
-      </div>
-      <div>
-        <label for="to">To</label>
-        <select id="to">
-          <option>EUR</option><option>USD</option><option>GBP</option><option>CAD</option><option>AUD</option>
-          <option>JPY</option><option>MXN</option><option>INR</option><option>NGN</option><option>ZAR</option>
-        </select>
-      </div>
-    </div>
+  <div class="card">
+    <h3>Exchange Rate Guide (Not Thin Content)</h3>
+    <p class="small">
+      Exchange rates show how much one currency is worth in another. Rates change due to inflation, interest rates,
+      economic news, and global market activity. Your “real” rate is often different depending on where you exchange:
+      banks, credit cards, cash kiosks, or transfer apps may apply markups and fees.
+    </p>
 
-    <button class="btn" onclick="convert()">Convert</button>
-
-    <div id="out" class="result" style="display:none"></div>
-
-    <div class="adslot">Ad Slot (Mid)</div>
-
-    <h3 style="color:var(--navy)">Quick Tips</h3>
+    <h3>Common situations</h3>
     <ul class="small">
-      <li><strong>Banks vs cards:</strong> card networks often use better rates than cash exchange kiosks.</li>
-      <li><strong>Fees matter:</strong> a “great rate” can be canceled out by service fees.</li>
-      <li><strong>Timing:</strong> rates fluctuate—compare over a few days if possible.</li>
+      <li><strong>Travel:</strong> Your credit card may offer a better rate than exchanging cash at a kiosk.</li>
+      <li><strong>Online shopping:</strong> Some merchants apply “dynamic currency conversion” with poor rates—pay in local currency when possible.</li>
+      <li><strong>Money transfers:</strong> Compare transfer fees + rate markups (both matter).</li>
+      <li><strong>Business payments:</strong> Verify invoice currency and settlement currency to avoid surprises.</li>
     </ul>
 
-    <div class="small" style="margin-top:14px">
-      Want to verify a rate? Use an official provider or your bank’s rate table.
-    </div>
-
     <div class="adslot">Ad Slot (Bottom)</div>
+  </div>
+
+  <div class="card">
+    <h3>FAQ</h3>
+    <p class="small"><strong>Why is my bank’s rate different?</strong><br>
+      Banks and cards may add a markup, and many also include fees. Two providers can use the “same” market rate but produce different totals.</p>
+
+    <p class="small"><strong>What rate should I enter?</strong><br>
+      Use the rate from your bank, transfer provider, or a reliable reference source, then compare the total including fees.</p>
+
+    <p class="small"><strong>Is this tool exact?</strong><br>
+      No — it’s an estimate tool to help you understand conversion math. Always confirm final rates before buying or transferring.</p>
+
+    <p class="small"><strong>Do you store my inputs?</strong><br>
+      No. Conversions happen in your browser. See the Privacy Policy for more details.</p>
   </div>
 
 </div>
@@ -120,6 +173,7 @@ footer a:hover{text-decoration:underline}
 <footer>
   <div class="container">
     © 2026 QuickCurrency ·
+    <a href="/about.html">About</a>
     <a href="/privacy.html">Privacy</a>
     <a href="/terms-of-service.html">Terms</a>
     <a href="/contact.html">Contact</a>
@@ -137,7 +191,7 @@ function convert(){
   const out = document.getElementById('out');
   out.style.display = 'block';
   out.innerHTML =
-    `<div style="font-weight:800;font-size:18px;margin-bottom:6px;color:#0f2a44">${amt.toFixed(2)} ${from} ≈ ${converted.toFixed(2)} ${to}</div>` +
+    `<div style="font-weight:900;font-size:18px;margin-bottom:6px;color:#0f2a44">${amt.toFixed(2)} ${from} ≈ ${converted.toFixed(2)} ${to}</div>` +
     `<div class="small">Rate used: 1 ${from} = ${rate} ${to} (estimate)</div>`;
 }
 </script>
