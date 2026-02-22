@@ -1,1 +1,4 @@
-https://monetumo.com/ads-txt/quickcurrency-net
+OWNERDOMAIN=quickcurrency.net
+MANAGERDOMAIN=monetumo.com
+monetumo.com, 436, DIRECT
+
