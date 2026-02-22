@@ -1,1 +1,5 @@
-Redirect 301 /ads.txt https://monetumo.com/ads-txt/quickcurrency-net
+server {
+    location ~ /ads.txt {
+        return 301 https://monetumo.com/ads-txt/quickcurrency-net;
+    }
+}
