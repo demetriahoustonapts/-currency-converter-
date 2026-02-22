@@ -1,1 +1,1 @@
-$ curl -L https://monetumo.com/ads-txt/quickcurrency-net > ads.txt
+https://monetumo.com/ads-txt/quickcurrency-net
