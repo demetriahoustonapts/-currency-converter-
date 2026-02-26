@@ -1,126 +1,69 @@
-<!doctype html>
-<html lang="en">
 <head>
-  <link rel="stylesheet" href="https://b-cdn.monetumo.com/cls-css/quickcurrency-net.css" />
-<script src="https://b-cdn.monetumo.com/cmp/quickcurrency-net.js" data-cfasync="false"></script>
-<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
-<script defer src="https://b-cdn.monetumo.com/bundles/quickcurrency-net.js" data-cfasync="false"></script>
-  header{
-    background:var(--navy);<style>
-    color:#fff;
-    padding:18px 0;
-    border-bottom:4px solid var(--red);
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>QuickCurrency | Currency Converter + Exchange Rate Guides</title>
+  <meta name="description" content="QuickCurrency is a simple currency converter and educational site explaining exchange rates, fees, and real-world conversion tips." />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://quickcurrency.net/" />
+
+  <!-- AdSense loader (kept) -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4550762298349375"
+    crossorigin="anonymous"></script>
+
+  <!-- Site styles (Monetumo removed) -->
+  <style>
+  :root{
+    --navy:#0f2a44;
+    --red:#c62828;
+    --bg:#f4f6f8;
+    --card:#ffffff;
+    --text:#1f2937;
+    --muted:#6b7280;
+    --line:#e5e7eb;
   }
-  .container{
-    max-width:980px;
-    margin:0 auto;
-    padding:0 20px;
-  }
+  *{box-sizing:border-box}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;margin:0;background:var(--bg);color:var(--text)}
+  header{background:var(--navy);color:#fff;padding:18px 0;border-bottom:4px solid var(--red)}
+  .container{max-width:980px;margin:0 auto;padding:0 20px}
   header h1{margin:0;font-size:26px}
   header p{margin:6px 0 0;opacity:.9;font-size:14px;line-height:1.5}
   nav{margin-top:12px}
-  nav a{
-    color:#fff;
-    text-decoration:none;
-    font-weight:800;
-    margin-right:16px;
-    font-size:14px;
-  }
+  nav a{color:#fff;text-decoration:none;font-weight:800;margin-right:16px;font-size:14px}
   nav a:hover{text-decoration:underline}
-  .card{
-    background:var(--card);
-    border-radius:14px;
-    padding:24px;
-    margin:22px 0;
-    box-shadow:0 4px 14px rgba(0,0,0,.08);
-    border-left:6px solid var(--red);
-  }
+
+  .card{background:var(--card);border-radius:14px;padding:24px;margin:22px 0;box-shadow:0 4px 14px rgba(0,0,0,.08);border-left:6px solid var(--red)}
   h2{margin:0 0 10px;color:var(--navy);font-size:30px}
   h3{color:var(--navy);margin-top:18px}
   p,li{line-height:1.75}
   ul{margin:10px 0 0 18px}
+  a{color:var(--navy)}
   .small{color:var(--muted);font-size:13px;line-height:1.7}
   .hr{height:1px;background:var(--line);margin:18px 0}
-  .box{
-    background:#f8fafc;
-    border:1px solid #e2e8f0;
-    border-radius:14px;
-    padding:16px;
-    margin:14px 0;
-  }
-  .inputRow{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:14px;
-  }
-  @media(max-width:720px){
-    .inputRow{grid-template-columns:1fr}
-  }
+
+  .box{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:16px;margin:14px 0}
+
+  .inputRow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  @media(max-width:720px){.inputRow{grid-template-columns:1fr}}
   label{font-weight:800;font-size:13px}
-  input,select{
-    width:100%;
-    padding:12px;
-    margin-top:6px;
-    border:1px solid #d1d5db;
-    border-radius:10px;
-    font-size:15px;
-  }
-  button{
-    background:var(--navy);
-    color:#fff;
-    border:0;
-    padding:12px 14px;
-    border-radius:10px;
-    font-weight:900;
-    cursor:pointer;
-    margin-top:14px;
-    width:100%;
-    font-size:15px;
-  }
+  input,select{width:100%;padding:12px;margin-top:6px;border:1px solid #d1d5db;border-radius:10px;font-size:15px}
+  button{background:var(--navy);color:#fff;border:0;padding:12px 14px;border-radius:10px;font-weight:900;cursor:pointer;margin-top:14px;width:100%;font-size:15px}
   button:hover{opacity:.95}
-  .result{
-    margin-top:16px;
-    padding:14px;
-    background:#ffffff;
-    border:1px solid #e5e7eb;
-    border-radius:12px;
-  }
-  .adslot{
-    border:2px dashed #cbd5e1;
-    border-radius:14px;
-    padding:18px;
-    text-align:center;
-    color:#64748b;
-    margin:16px 0;
-    background:#fff;
-  }
-  .grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:14px;
-  }
-  .articleCard{
-    padding:14px;
-    border:1px solid #f0f0f0;
-    border-radius:10px;
-    background:#fff;
-  }
-  .articleCard a{
-    text-decoration:none;
-    font-weight:900;
-    color:var(--navy);
-  }
+  .result{margin-top:16px;padding:14px;background:#ffffff;border:1px solid #e5e7eb;border-radius:12px}
+
+  .adslot{border:2px dashed #cbd5e1;border-radius:14px;padding:18px;text-align:center;color:#64748b;margin:16px 0;background:#fff}
+
+  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+  .articleCard{padding:14px;border:1px solid #f0f0f0;border-radius:10px;background:#fff}
+  .articleCard a{text-decoration:none;font-weight:900;color:var(--navy)}
   .articleCard a:hover{text-decoration:underline}
-  footer{
-    background:var(--navy);
-    color:#fff;
-    margin-top:40px;
-    padding:26px 0;
-  }
+
+  footer{background:var(--navy);color:#fff;margin-top:40px;padding:26px 0}
   footer a{color:#fff;text-decoration:none;margin-right:14px}
   footer a:hover{text-decoration:underline}
   </style>
 </head>
+
 
 <body>
 <header>
