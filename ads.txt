@@ -1,3 +1,1 @@
-OWNERDOMAIN=quickcurrency.net
-MANAGERDOMAIN=monetumo.com
-monetumo.com, 436, DIRECT
+google.com, pub-4550762298349375, DIRECT, f08c47fec0942fa0
