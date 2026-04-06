@@ -1,188 +1,242 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>About | QuickCurrency</title>
-  <meta name="description" content="About QuickCurrency: a simple currency converter and exchange-rate education website that helps people understand rates, fees, and real-world conversions.">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About QuickCurrency | Currency Conversion & Editorial Policy</title>
+  <meta name="description" content="Learn about QuickCurrency, what the site covers, who it is for, and how QuickCurrency reviews and updates educational content about exchange rates, fees, and travel money." />
   <link rel="canonical" href="https://quickcurrency.net/about.html" />
 
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4550762298349375"
-     crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script>
 
   <style>
-  :root{--navy:#0f2a44;--red:#c62828;--bg:#f4f6f8;--card:#ffffff;--text:#1f2937;--muted:#6b7280;--line:#e5e7eb}
-  *{box-sizing:border-box}
-  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;margin:0;background:var(--bg);color:var(--text)}
-  header{background:var(--navy);color:#fff;padding:18px 0;border-bottom:4px solid var(--red)}
-  .container{max-width:980px;margin:0 auto;padding:0 20px}
-  header h1{margin:0;font-size:26px}
-  header p{margin:6px 0 0;opacity:.9;font-size:14px}
-  nav{margin-top:12px}
-  nav a{color:#fff;text-decoration:none;font-weight:800;margin-right:16px;font-size:14px}
-  nav a:hover{text-decoration:underline}
-  .card{background:var(--card);border-radius:14px;padding:24px;margin:22px 0;box-shadow:0 4px 14px rgba(0,0,0,.08);border-left:6px solid var(--red)}
-  h2{margin:0 0 10px;color:var(--navy);font-size:30px}
-  h3{color:var(--navy);margin-top:18px}
-  p,li{line-height:1.75}
-  ul{margin:10px 0 0 18px}
-  .small{color:var(--muted);font-size:13px;line-height:1.7}
-  .hr{height:1px;background:var(--line);margin:18px 0}
-  .badge{display:inline-block;background:#eef3fa;border:1px solid #d7e2f2;border-radius:999px;padding:6px 10px;font-size:12px;color:#334155;margin:6px 8px 0 0}
-  .adslot{border:2px dashed #cbd5e1;border-radius:14px;padding:18px;text-align:center;color:#64748b;margin:16px 0;background:#fff}
-  footer{background:var(--navy);color:#fff;margin-top:40px;padding:26px 0}
-  footer a{color:#fff;text-decoration:none;margin-right:14px}
-  footer a:hover{text-decoration:underline}
-  a{color:#0f2a44}
+    :root{
+      --navy:#0f2a44;
+      --red:#c62828;
+      --bg:#f4f6f8;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --line:#e5e7eb;
+      --soft:#eef3fa;
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+    }
+    header{
+      background:var(--navy);
+      color:#fff;
+      padding:18px 0;
+      border-bottom:4px solid var(--red);
+    }
+    .container{max-width:980px;margin:0 auto;padding:0 20px}
+    header h1{margin:0;font-size:26px}
+    header p{margin:6px 0 0;opacity:.92;font-size:14px;line-height:1.5}
+    nav{margin-top:12px}
+    nav a{
+      color:#fff;
+      text-decoration:none;
+      font-weight:800;
+      margin-right:16px;
+      font-size:14px;
+      display:inline-block;
+      padding:6px 0;
+    }
+    nav a:hover{text-decoration:underline}
+
+    .hero{
+      background:linear-gradient(135deg, #0f2a44 0%, #183e64 60%, #0f2a44 100%);
+      color:#fff;
+      border-radius:16px;
+      padding:28px;
+      margin:22px 0;
+      box-shadow:0 6px 20px rgba(0,0,0,.12);
+      border:1px solid rgba(255,255,255,.08);
+    }
+    .hero h2{color:#fff;margin:0 0 12px;font-size:34px}
+    .hero p{margin:0;opacity:.96;line-height:1.8}
+
+    .card{
+      background:var(--card);
+      border-radius:14px;
+      padding:24px;
+      margin:22px 0;
+      box-shadow:0 4px 14px rgba(0,0,0,.08);
+      border-left:6px solid var(--red);
+    }
+    h2{margin:0 0 10px;color:var(--navy);font-size:30px}
+    h3{color:var(--navy);margin:20px 0 10px}
+    p,li{line-height:1.75}
+    a{color:var(--navy)}
+    .small{color:var(--muted);font-size:13px;line-height:1.7}
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:14px;
+      margin-top:16px;
+    }
+    .miniCard{
+      background:var(--soft);
+      border:1px solid #d7e2f2;
+      border-radius:12px;
+      padding:16px;
+    }
+    .miniCard h3{margin:0 0 8px;font-size:18px}
+    .miniCard p{margin:0}
+    .note{
+      background:#fff7ed;
+      border:1px solid #fed7aa;
+      border-radius:12px;
+      padding:14px 16px;
+      margin:18px 0;
+    }
+    ul{padding-left:22px}
+    footer{
+      background:var(--navy);
+      color:#fff;
+      margin-top:40px;
+      padding:26px 0;
+    }
+    footer a{color:#fff;text-decoration:none;margin-right:14px}
+    footer a:hover{text-decoration:underline}
   </style>
 </head>
 
 <body>
+  <header>
+    <div class="container">
+      <h1>QuickCurrency</h1>
+      <p>Exchange rates explained in plain language</p>
 
-<header>
-  <div class="container">
-    <h1>QuickCurrency</h1>
-    <p>Currency converter + exchange rate education</p>
-
-    <nav>
-      <a href="/">Home</a>
-      <a href="/blog/">Guides</a>
-      <a href="/about.html">About</a>
-      <a href="/contact.html">Contact</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms-of-service.html">Terms</a>
-    </nav>
-  </div>
-</header>
-
-<div class="container">
-  <div class="card">
-    <h2>About QuickCurrency</h2>
-
-    <p>
-      QuickCurrency is a simple currency conversion tool and educational website built to help people understand
-      exchange rates in plain language. If you’ve ever asked, “Why does my bank show a different rate than Google?”
-      or “Why did I pay more than I expected at checkout?” — you’re exactly who this site is for.
-    </p>
-
-    <p>
-      Our mission is to provide easy conversion math, practical tips, and clear explanations so you can make smarter
-      decisions when traveling, shopping online, sending money, or comparing international pricing.
-    </p>
-
-    <div>
-      <span class="badge">Converter tool</span>
-      <span class="badge">Rate education</span>
-      <span class="badge">Fee awareness</span>
-      <span class="badge">No hype</span>
+      <nav aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/blog/">Guides</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms-of-service.html">Terms</a>
+      </nav>
     </div>
+  </header>
 
-    <h3>What QuickCurrency Does</h3>
-    <ul>
-      <li><strong>Quick estimates:</strong> Convert amounts between common currencies using a rate you enter.</li>
-      <li><strong>Education:</strong> Explain how exchange rates, markups, and fees affect the final total.</li>
-      <li><strong>Comparison help:</strong> Help you compare providers (banks, cards, transfer apps) with fewer surprises.</li>
-      <li><strong>Simple language:</strong> No complicated charts required—just clear examples.</li>
-    </ul>
+  <main class="container">
+    <section class="hero" aria-labelledby="about-title">
+      <h2 id="about-title">About QuickCurrency</h2>
+      <p>
+        QuickCurrency is a simple currency conversion and educational website built to help readers understand exchange rates, payment markups, currency fees, and real-world travel money decisions in plain language. If you have ever asked why your bank rate differs from the rate you saw online, or why a checkout total felt more expensive than expected, this site is built for you.
+      </p>
+    </section>
 
-    <h3>What QuickCurrency Does NOT Do</h3>
-    <p>
-      QuickCurrency is not a bank, money transfer service, or payment processor. We do not execute transactions,
-      store your financial account information, or guarantee final conversion totals. Conversion results shown are
-      estimates for informational purposes only.
-    </p>
+    <section class="card">
+      <h2>What QuickCurrency Covers</h2>
+      <p>
+        QuickCurrency focuses on practical, beginner-friendly explanations of currency conversion. The goal is not to overwhelm readers with technical market jargon, but to help them make clearer decisions when comparing cards, ATMs, exchange counters, transfer apps, and international prices.
+      </p>
 
-    <div class="hr"></div>
+      <div class="grid">
+        <div class="miniCard">
+          <h3>Exchange Rates</h3>
+          <p>Clear explanations of how rates work, why they change, and why providers often give different results.</p>
+        </div>
+        <div class="miniCard">
+          <h3>Fee Awareness</h3>
+          <p>Guides about card fees, ATM charges, exchange markups, and checkout conversion traps.</p>
+        </div>
+        <div class="miniCard">
+          <h3>Travel Money</h3>
+          <p>Practical tips for spending abroad, getting cash, and choosing safer, lower-cost payment options.</p>
+        </div>
+        <div class="miniCard">
+          <h3>Simple Tools</h3>
+          <p>Basic estimation tools and examples designed to help readers compare real-world offers more clearly.</p>
+        </div>
+      </div>
+    </section>
 
-    <h3>Why Rates Differ (The “Real-World Rate”)</h3>
-    <p>
-      Many people assume there is “one” exchange rate. In reality, the rate you get depends on where and how you exchange.
-      A provider can show you a rate that looks close to the market rate but still charge more by adding:
-    </p>
-    <ul>
-      <li><strong>Rate markup:</strong> A hidden margin added to the mid-market rate.</li>
-      <li><strong>Foreign transaction fees:</strong> Often applied to international card purchases.</li>
-      <li><strong>Transfer fees:</strong> Fixed fees or percentage-based fees on money transfers.</li>
-      <li><strong>ATM fees:</strong> Charges from both the ATM operator and your bank.</li>
-      <li><strong>Dynamic currency conversion (DCC):</strong> “Pay in your currency” at checkout—often worse rates.</li>
-    </ul>
+    <section class="card">
+      <h2>Who This Site Is For</h2>
+      <ul>
+        <li>Travelers comparing exchange counters, ATMs, and cards before or during a trip</li>
+        <li>Online shoppers checking whether a foreign-currency checkout total looks fair</li>
+        <li>Freelancers reviewing invoice amounts, payouts, or cross-border payment examples</li>
+        <li>Everyday readers who want practical explanations without heavy financial jargon</li>
+      </ul>
+    </section>
 
-    <h3>Common Use Cases</h3>
-    <ul>
-      <li><strong>Travel planning:</strong> Estimate daily budgets and compare cash vs card spending.</li>
-      <li><strong>Online purchases:</strong> Understand checkout conversion and avoid DCC when possible.</li>
-      <li><strong>Sending money:</strong> Estimate how much the recipient receives after fees and rate markups.</li>
-      <li><strong>Freelancers:</strong> Convert invoice amounts and compare payout options.</li>
-      <li><strong>Businesses:</strong> Quick estimates for international pricing and vendor comparisons.</li>
-    </ul>
+    <section class="card">
+      <h2>What QuickCurrency Does Not Do</h2>
+      <p>
+        QuickCurrency is not a bank, brokerage, exchange service, money transfer platform, or payment processor. We do not execute transactions, hold customer funds, or provide personalized financial, investment, legal, or tax advice.
+      </p>
+      <div class="note">
+        <strong>Important:</strong> Content on QuickCurrency is educational only. Final exchange rates, fees, and terms must always be confirmed directly with your bank, card issuer, ATM operator, merchant, or payment provider.
+      </div>
+    </section>
 
-    <div class="hr"></div>
+    <section class="card" id="editorial-policy">
+      <h2>Author &amp; Editorial Policy</h2>
 
-    <h3>Transparency &amp; Accuracy</h3>
-    <p>
-      We aim to provide clear information, but rates change constantly. Your final amount depends on your provider.
-      Before making a purchase or transfer, always confirm the final rate and fees with your bank or platform.
-    </p>
+      <h3>Who creates the content</h3>
+      <p>
+        QuickCurrency articles are published under QuickCurrency Editorial. Content is created for readers who want practical help understanding exchange-rate decisions, fee differences, and common payment situations such as ATM withdrawals, travel purchases, card charges, and conversion offers at checkout.
+      </p>
 
-    <div class="hr"></div>
+      <h3>How content is reviewed</h3>
+      <ul>
+        <li>Articles are reviewed for clarity, consistency, and practical usefulness before updates are published.</li>
+        <li>Worked examples are checked to make sure the math and explanations are easy to follow.</li>
+        <li>Pages may be updated when examples, structure, or wording are improved.</li>
+        <li>Meaningful revisions are reflected with a visible “Last updated” date on the page.</li>
+      </ul>
 
-    <h3 id="editorial-policy">Author &amp; Editorial Policy</h3>
-    <p>
-      QuickCurrency is independently maintained as a practical currency conversion and travel money education website.
-      We publish beginner-friendly guides to help readers understand exchange rates, hidden fees, card costs, ATM charges,
-      and checkout traps like Dynamic Currency Conversion (DCC).
-    </p>
+      <h3>Why the content exists</h3>
+      <p>
+        QuickCurrency exists to help people make better sense of real-world currency conversion costs. The purpose of the site is educational: to explain exchange rates, markups, fees, and travel money decisions in a way that is straightforward, useful, and easy to compare.
+      </p>
 
-    <h4 style="margin:14px 0 6px;color:#0f2a44;">Who creates the content</h4>
-    <p>
-      Articles are published by QuickCurrency.net and reviewed for clarity, calculation accuracy, and usefulness before updates go live.
-      We write for travelers, online shoppers, freelancers, and anyone comparing international prices.
-    </p>
+      <h3>Sources and transparency</h3>
+      <p>
+        Where helpful, QuickCurrency may reference established consumer, payment, or financial-information sources to explain concepts or provide additional context. For example, Visa provides consumer information about Dynamic Currency Conversion (DCC) and how it can affect travelers:
+        <a href="https://usa.visa.com/travel-with-visa/dynamic-currency-conversion.html" target="_blank" rel="noopener noreferrer">Visa: Dynamic Currency Conversion Explained</a>.
+      </p>
 
-    <h4 style="margin:14px 0 6px;color:#0f2a44;">How content is reviewed</h4>
-    <ul>
-      <li><strong>Human-reviewed:</strong> Pages are checked for clear wording, consistent examples, and practical usefulness.</li>
-      <li><strong>Updated when improved:</strong> Important edits are reflected with a “Last updated” date on the page.</li>
-      <li><strong>No financial advice:</strong> Content is educational only and should not replace provider terms or professional advice.</li>
-    </ul>
+      <h3>Corrections and updates</h3>
+      <p>
+        If a reader spots an outdated example, unclear explanation, broken link, or calculation issue, QuickCurrency may review and correct the page. If you notice a problem, please contact us and include the page URL whenever possible.
+      </p>
+    </section>
 
-    <h4 style="margin:14px 0 6px;color:#0f2a44;">Sources and transparency</h4>
-    <p>
-      When helpful, we reference established consumer and financial sources for definitions and payment concepts.
-      For example, Visa explains that Dynamic Currency Conversion (DCC) may include exchange rate and additional fees:
-      <a href="https://usa.visa.com/travel-with-visa/dynamic-currency-conversion.html" target="_blank" rel="noopener">Visa: Dynamic Currency Conversion Explained</a>.
-    </p>
+    <section class="card">
+      <h2>Contact</h2>
+      <p>
+        If you have questions, spot an error, or want to suggest a future guide topic, contact QuickCurrency at:
+        <br />
+        <strong>Email:</strong>
+        <a href="mailto:demetria.houstonapts@gmail.com">demetria.houstonapts@gmail.com</a>
+      </p>
+      <p class="small">Last updated: March 22, 2026</p>
+    </section>
+  </main>
 
-    <h4 style="margin:14px 0 6px;color:#0f2a44;">Corrections</h4>
-    <p>
-      If you spot an error, outdated example, or broken link, contact us and we’ll review it. Meaningful edits are reflected
-      in the page’s updated date where appropriate.
-    </p>
-
-    <h3>Contact</h3>
-    <p>
-      If you have questions, want to report a broken page, or have suggestions for new educational content,
-      contact us at:
-      <br><strong>Email:</strong>
-      <a href="mailto:demetria.houstonapts@gmail.com">demetria.houstonapts@gmail.com</a>
-    </p>
-
-    <p class="small">Last updated: March 2, 2026</p>
-  </div>
-</div>
-
-<footer>
-  <div class="container">
-    © 2026 QuickCurrency ·
-    <a href="/about.html">About</a>
-    <a href="/privacy.html">Privacy</a>
-    <a href="/terms-of-service.html">Terms</a>
-    <a href="/contact.html">Contact</a>
-  </div>
-</footer>
-
+  <footer>
+    <div class="container">
+      <p style="margin:0 0 10px;"><strong>QuickCurrency</strong></p>
+      <p style="margin:0 0 12px;">Educational guides about exchange rates, currency conversion, travel money, and fee awareness.</p>
+      <p style="margin:0;">
+        <a href="/">Home</a>
+        <a href="/blog/">Guides</a>
+        <a href="/about.html">About</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms-of-service.html">Terms</a>
+      </p>
+    </div>
+  </footer>
 </body>
 </html>
-
 
