@@ -1,381 +1,175 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<main>
+  <section class="hero">
+    <h1>QuickCurrency: Simple Currency Converter + Real-World Fee Checker</h1>
+    <p>
+      QuickCurrency helps you estimate currency conversions using the rate you are actually being offered by a bank, card, ATM, or payment provider. It is designed for travelers, online shoppers, freelancers, and anyone comparing international prices.
+    </p>
+    <p>
+      <strong>Reviewed by QuickCurrency Editorial</strong> · Educational use only · Last updated: March 6, 2026
+    </p>
+  </section>
 
-  <title>QuickCurrency | Currency Converter + Exchange Rate Guides</title>
-  <meta name="description" content="QuickCurrency is a simple currency converter and educational site explaining exchange rates, fees, and real-world conversion tips for travelers and online shoppers." />
+  <section class="converter-box">
+    <h2>Currency Converter</h2>
+    <p>
+      Use this tool to estimate currency conversion amounts. Exchange rates vary by provider and may include fees or markups. Always confirm the final rate and total with your bank or payment provider before completing a transaction.
+    </p>
 
-  <!-- Canonical (root homepage) -->
-  <link rel="canonical" href="https://quickcurrency.net/" />
+    <label for="amount">Amount</label>
+    <input type="number" id="amount" placeholder="Enter amount" />
 
-  <!-- Google AdSense loader -->
-  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4550762298349375"
-    crossorigin="anonymous"></script>
+    <label for="rate">Exchange Rate (enter the rate you're using)</label>
+    <input type="number" id="rate" step="0.0001" placeholder="Example: 0.92" />
 
-  <style>
-    :root{
-      --navy:#0f2a44;
-      --red:#c62828;
-      --bg:#f4f6f8;
-      --card:#ffffff;
-      --text:#1f2937;
-      --muted:#6b7280;
-      --line:#e5e7eb;
-    }
-    *{box-sizing:border-box}
-    body{
-      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-    }
-    header{
-      background:var(--navy);
-      color:#fff;
-      padding:18px 0;
-      border-bottom:4px solid var(--red);
-    }
-    .container{max-width:980px;margin:0 auto;padding:0 20px}
-    header h1{margin:0;font-size:26px}
-    header p{margin:6px 0 0;opacity:.92;font-size:14px;line-height:1.5}
-    nav{margin-top:12px}
-    nav a{
-      color:#fff;text-decoration:none;font-weight:800;margin-right:16px;font-size:14px;
-      display:inline-block;
-      padding:6px 0;
-    }
-    nav a:hover{text-decoration:underline}
+    <label for="fromCurrency">From</label>
+    <input type="text" id="fromCurrency" placeholder="Example: USD" />
 
-    main{display:block}
-    .card{
-      background:var(--card);
-      border-radius:14px;
-      padding:24px;
-      margin:22px 0;
-      box-shadow:0 4px 14px rgba(0,0,0,.08);
-      border-left:6px solid var(--red);
-    }
-    h2{margin:0 0 10px;color:var(--navy);font-size:30px}
-    h3{color:var(--navy);margin-top:18px}
-    p,li{line-height:1.75}
-    ul{margin:10px 0 0 18px}
-    a{color:var(--navy)}
-    .small{color:var(--muted);font-size:13px;line-height:1.7}
-    .hr{height:1px;background:var(--line);margin:18px 0}
+    <label for="toCurrency">To</label>
+    <input type="text" id="toCurrency" placeholder="Example: EUR" />
 
-    .box{background:#f8fafc;border:1px solid #e2e8f0;border-radius:14px;padding:16px;margin:14px 0}
-    .inputRow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    @media(max-width:720px){.inputRow{grid-template-columns:1fr}}
-    label{font-weight:800;font-size:13px}
-    input,select{
-      width:100%;
-      padding:12px;
-      margin-top:6px;
-      border:1px solid #d1d5db;
-      border-radius:10px;
-      font-size:15px;
-      background:#fff;
-    }
-    button{
-      background:var(--navy);
-      color:#fff;
-      border:0;
-      padding:12px 14px;
-      border-radius:10px;
-      font-weight:900;
-      cursor:pointer;
-      margin-top:14px;
-      width:100%;
-      font-size:15px;
-    }
-    button:hover{opacity:.95}
-    .result{
-      margin-top:16px;
-      padding:14px;
-      background:#ffffff;
-      border:1px solid #e5e7eb;
-      border-radius:12px;
-    }
+    <button onclick="convertCurrency()">Convert</button>
 
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
-    .articleCard{
-      padding:14px;
-      border:1px solid #eef2f7;
-      border-radius:12px;
-      background:#fff;
-    }
-    .articleCard a{text-decoration:none;font-weight:900;color:var(--navy)}
-    .articleCard a:hover{text-decoration:underline}
-    .pill{
-      display:inline-block;
-      background:#eef3fa;
-      border:1px solid #d7e2f2;
-      border-radius:999px;
-      padding:6px 10px;
-      font-size:12px;
-      color:#334155;
-      margin:6px 8px 0 0;
-    }
-    .callout{
-      border:1px solid #e2e8f0;
-      background:#ffffff;
-      border-radius:14px;
-      padding:14px;
-      margin-top:14px;
-    }
+    <h3>Result:</h3>
+    <p id="result">Enter an amount and rate, then click Convert.</p>
+  </section>
 
-    footer{
-      background:var(--navy);
-      color:#fff;
-      margin-top:40px;
-      padding:26px 0;
-    }
-    footer a{color:#fff;text-decoration:none;margin-right:14px}
-    footer a:hover{text-decoration:underline}
-  </style>
-</head>
+  <section>
+    <h2>How QuickCurrency Works</h2>
+    <p>
+      Most travelers and shoppers do not receive the mid-market exchange rate shown on financial sites. Instead, the final rate often depends on where and how you exchange money. Banks, ATMs, cards, apps, and checkout terminals may all apply different markups or fees.
+    </p>
+    <p>
+      QuickCurrency is built to help you compare those real-world offers more clearly. Instead of assuming a perfect market rate, you can enter the rate you are actually being offered and estimate the result before you exchange money or approve a payment.
+    </p>
+  </section>
 
-<body>
-  <header>
-    <div class="container">
-      <h1>QuickCurrency</h1>
-      <p>Simple currency conversion + real-world exchange rate education</p>
+  <section>
+    <h2>How to Use This Converter</h2>
+    <p>
+      This converter works best when you enter the rate from the provider you plan to use. That could be your bank, credit card, ATM, exchange counter, or money transfer app.
+    </p>
 
-      <nav aria-label="Primary">
-        <a href="/">Home</a>
-        <a href="/blog/">Guides</a>
-        <a href="/about.html">About</a>
-        <a href="/contact.html">Contact</a>
-        <a href="/privacy.html">Privacy</a>
-        <a href="/terms-of-service.html">Terms</a>
-      </nav>
-    </div>
-  </header>
+    <h3>Example 1: Simple conversion</h3>
+    <p>
+      If you enter Amount = 100, Rate = 0.92, From = USD, To = EUR, your estimate is 92 EUR.
+    </p>
 
-  <main class="container">
+    <h3>Example 2: Spotting a markup</h3>
+    <p>
+      If a reference rate is 0.92 but your provider gives you 0.89, that difference may be a markup or spread. On larger amounts, that gap can become expensive.
+    </p>
 
-    <section class="card" aria-labelledby="converter-title">
-      <h2 id="converter-title">Currency Converter</h2>
-      <p>
-        Use this tool to estimate currency conversion amounts. Exchange rates vary by provider and may include fees or markups.
-        Always confirm the final rate and total with your bank or payment provider before completing a transaction.
-      </p>
+    <h3>Example 3: Avoiding DCC</h3>
+    <p>
+      If a payment terminal asks whether you want to pay in your home currency, compare carefully. Dynamic Currency Conversion (DCC) often means a worse effective rate than paying in the local currency.
+    </p>
+  </section>
 
-      <div class="box">
-        <div class="inputRow">
-          <div>
-            <label for="amount">Amount</label>
-            <input id="amount" type="number" value="100" min="0" step="0.01" />
-          </div>
-          <div>
-            <label for="rate">Exchange Rate (enter the rate you’re using)</label>
-            <input id="rate" type="number" value="1.00" min="0" step="0.0001" />
-          </div>
-        </div>
+  <section>
+    <h2>Original Comparison: Common Ways to Exchange Money</h2>
+    <p>
+      This quick table shows why the final total matters more than the advertised exchange rate.
+    </p>
 
-        <div class="inputRow">
-          <div>
-            <label for="from">From</label>
-            <select id="from">
-              <option>USD</option>
-              <option>EUR</option>
-              <option>GBP</option>
-              <option>CAD</option>
-              <option>AUD</option>
-              <option>JPY</option>
-              <option>MXN</option>
-            </select>
-          </div>
-          <div>
-            <label for="to">To</label>
-            <select id="to">
-              <option>USD</option>
-              <option selected>EUR</option>
-              <option>GBP</option>
-              <option>CAD</option>
-              <option>AUD</option>
-              <option>JPY</option>
-              <option>MXN</option>
-            </select>
-          </div>
-        </div>
+    <table>
+      <thead>
+        <tr>
+          <th>Method</th>
+          <th>Typical Cost</th>
+          <th>Best Use</th>
+          <th>Main Risk</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Airport exchange</td>
+          <td>Usually highest overall cost</td>
+          <td>Emergency cash only</td>
+          <td>Poor rates and extra fees</td>
+        </tr>
+        <tr>
+          <td>Home bank</td>
+          <td>Moderate cost</td>
+          <td>Small amount before travel</td>
+          <td>Still may include markup</td>
+        </tr>
+        <tr>
+          <td>ATM abroad</td>
+          <td>Often competitive overall</td>
+          <td>Main travel cash source</td>
+          <td>ATM fees and DCC prompts</td>
+        </tr>
+        <tr>
+          <td>No-foreign-fee card</td>
+          <td>Often among the best options</td>
+          <td>Purchases abroad</td>
+          <td>Possible DCC at checkout</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
 
-        <button type="button" onclick="convertNow()">Convert</button>
+  <section>
+    <h2>Quick Tips to Avoid Conversion Traps</h2>
+    <ul>
+      <li><strong>Avoid airport exchanges</strong> unless you only need a very small amount right away.</li>
+      <li><strong>Watch for DCC</strong> when a terminal offers to charge you in your home currency.</li>
+      <li><strong>Check card fees</strong> before traveling or buying from international merchants.</li>
+      <li><strong>Compare the final total</strong>, not just the headline exchange rate.</li>
+      <li><strong>Use larger ATM withdrawals less often</strong> if your bank charges flat withdrawal fees.</li>
+    </ul>
+    <p>
+      Note: QuickCurrency provides estimates for education and convenience. Your final result depends on your provider.
+    </p>
+  </section>
 
-        <div class="result" id="resultBox">
-          <strong>Result:</strong>
-          <div class="small">Enter an amount and rate, then click Convert.</div>
-        </div>
+  <section>
+    <h2>Who This Site Is For</h2>
+    <ul>
+      <li><strong>Travelers</strong> comparing ATMs, exchange counters, and cards before a trip</li>
+      <li><strong>Online shoppers</strong> checking whether a foreign checkout rate is fair</li>
+      <li><strong>Freelancers</strong> comparing payouts across currencies</li>
+      <li><strong>Small businesses</strong> estimating invoice or vendor costs across borders</li>
+    </ul>
+  </section>
 
-        <div class="callout">
-          <div class="small">
-            Tip: If you’re comparing offers, check the “real-world rate” by looking for
-            markups, foreign transaction fees, ATM fees, and Dynamic Currency Conversion (DCC).
-          </div>
-        </div>
-      </div>
+  <section>
+    <h2>Featured Guides</h2>
+    <ul>
+      <li><a href="https://quickcurrency.net/blog/currency-exchange-guide-for-travelers.html">Complete Guide to Currency Exchange for International Travelers</a></li>
+      <li><a href="https://quickcurrency.net/blog/10-currency-exchange-mistakes-to-avoid.html">10 Currency Exchange Mistakes That Cost You Money</a></li>
+      <li><a href="https://quickcurrency.net/blog/airport-exchange-vs-atms-vs-banks.html">Airport Currency Exchange vs ATMs vs Banks: Which Is Best?</a></li>
+      <li><a href="https://quickcurrency.net/blog/understanding-currency-exchange-fees.html">Understanding Currency Exchange Fees: Complete Guide</a></li>
+    </ul>
+  </section>
 
-      <div class="hr"></div>
+  <section>
+    <h2>Frequently Asked Questions</h2>
 
-      <h3>Quick Tips (Avoid Conversion Traps)</h3>
-      <ul>
-        <li><strong>Avoid airport exchanges:</strong> rates and fees are often worse.</li>
-        <li><strong>Watch for DCC:</strong> “Pay in your currency?” usually costs more.</li>
-        <li><strong>Check card fees:</strong> foreign transaction fees can add up.</li>
-        <li><strong>Compare providers:</strong> the final total is what matters, not the headline rate.</li>
-      </ul>
+    <h3>Why does my bank show a different exchange rate?</h3>
+    <p>
+      Banks and payment providers often add a spread, markup, or fee. Even when the market rate looks similar, your final conversion may be different because of card fees, ATM fees, or provider pricing.
+    </p>
 
-      <p class="small" style="margin-top:14px;">
-        Note: QuickCurrency provides estimates for education and convenience. Your final total depends on your provider.
-      </p>
-    </section>
+    <h3>What is DCC (Dynamic Currency Conversion)?</h3>
+    <p>
+      DCC is when a merchant or ATM offers to charge you in your home currency instead of the local one. It may seem convenient, but it often costs more.
+    </p>
 
-    <section class="card" aria-labelledby="howto-title" style="border-left:6px solid #0f2a44;">
-      <h2 id="howto-title">How to Use This Converter (Real Examples)</h2>
+    <h3>Are the results exact?</h3>
+    <p>
+      No. QuickCurrency provides educational estimates only. Always verify the final rate and total with your bank, card issuer, ATM operator, or payment provider.
+    </p>
+  </section>
 
-      <div>
-        <span class="pill">Beginner-friendly</span>
-        <span class="pill">Travel + shopping</span>
-        <span class="pill">Fee awareness</span>
-      </div>
-
-      <p>
-        This converter works best when you enter the rate you’re actually being offered (bank, card, ATM, money transfer app).
-        That way you can compare options apples-to-apples.
-      </p>
-
-      <h3>Example 1: Simple conversion</h3>
-      <p class="small">
-        If you enter Amount = 100, Rate = 0.92, From = USD, To = EUR, your estimate is 92 EUR.
-      </p>
-
-      <h3>Example 2: Spotting a markup</h3>
-      <p class="small">
-        If Google shows 0.92 but your provider gives 0.89, that difference is often a markup/spread (or fees).
-        Over larger amounts, that gap can be significant.
-      </p>
-
-      <h3>Example 3: Avoid DCC</h3>
-      <p class="small">
-        When a terminal asks “Pay in USD?”, choose the local currency when you can. DCC often uses a worse rate.
-      </p>
-
-      <div class="hr"></div>
-      <p class="small">
-        Want deeper explanations? Browse the guides below.
-      </p>
-    </section>
-
-    <section class="card" aria-labelledby="guides-title" style="border-left:6px solid #0f2a44;">
-      <h2 id="guides-title">Currency Guides &amp; Tips</h2>
-      <p>
-        Practical, beginner-friendly guides on exchange rates, fees, travel money, and avoiding common currency conversion traps.
-        These are written to help you make better decisions before you exchange money or pay in a foreign currency.
-      </p>
-
-      <div class="grid">
-        <div class="articleCard">
-          <h3 style="margin:0 0 6px;font-size:18px;">
-            <a href="/blog/">Browse All Guides</a>
-          </h3>
-          <p style="margin:0;color:#444;">
-            See all QuickCurrency articles in one place with clear explanations and real-world examples.
-          </p>
-        </div>
-
-        <div class="articleCard">
-          <h3 style="margin:0 0 6px;font-size:18px;">
-            <a href="/blog/how-exchange-rates-work-beginners-guide.html">How Exchange Rates Work (Beginners Guide)</a>
-          </h3>
-          <p style="margin:0;color:#444;">
-            What an exchange rate is, why it changes, and why your bank rate can differ from the Google rate.
-          </p>
-        </div>
-
-        <div class="articleCard">
-          <h3 style="margin:0 0 6px;font-size:18px;">
-            <a href="/blog/understanding-currency-exchange-fees.html">Understanding Currency Exchange Fees</a>
-          </h3>
-          <p style="margin:0;color:#444;">
-            Learn common markups and fees that change your final total—and how to spot them.
-          </p>
-        </div>
-
-        <div class="articleCard">
-          <h3 style="margin:0 0 6px;font-size:18px;">
-            <a href="/blog/avoid-currency-exchange-scams.html">How to Avoid Currency Exchange Scams</a>
-          </h3>
-          <p style="margin:0;color:#444;">
-            The biggest travel scams and how to protect yourself when exchanging cash abroad.
-          </p>
-        </div>
-      </div>
-
-      <p class="small" style="margin-top:16px;">
-        Tip: These guides are linked from the homepage so Google can crawl them faster and reviewers can verify content value.
-      </p>
-    </section>
-
-    <section class="card" aria-labelledby="faq-title">
-      <h2 id="faq-title">Frequently Asked Questions</h2>
-
-      <h3>Why does my bank show a different exchange rate?</h3>
-      <p>
-        Banks and payment providers often apply markups or fees. Even if the market rate is similar, your final conversion may be different due to
-        foreign transaction fees, ATM fees, or provider spreads.
-      </p>
-
-      <h3>What is DCC (Dynamic Currency Conversion)?</h3>
-      <p>
-        DCC is when a checkout terminal offers to charge you in your home currency instead of the local one.
-        It may look convenient, but it often includes a worse exchange rate and higher costs.
-      </p>
-
-      <h3>Are the results exact?</h3>
-      <p>
-        No. QuickCurrency provides conversion estimates for education and convenience.
-        Always confirm the final total with your bank or provider.
-      </p>
-
-      <div class="hr"></div>
-      <p class="small">
-        Contact: <a href="mailto:demetria.houstonapts@gmail.com">demetria.houstonapts@gmail.com</a>
-      </p>
-    </section>
-
-  </main>
-
-  <footer>
-    <div class="container">
-      © 2026 QuickCurrency ·
-      <a href="/about.html">About</a>
-      <a href="/privacy.html">Privacy</a>
-      <a href="/terms-of-service.html">Terms</a>
-      <a href="/contact.html">Contact</a>
-    </div>
-  </footer>
-
-  <script>
-    function convertNow(){
-      const amount = parseFloat(document.getElementById("amount").value || "0");
-      const rate = parseFloat(document.getElementById("rate").value || "0");
-      const from = document.getElementById("from").value;
-      const to = document.getElementById("to").value;
-
-      const converted = amount * rate;
-
-      document.getElementById("resultBox").innerHTML =
-        "<strong>Result:</strong>" +
-        "<div style='margin-top:6px; font-size:18px; font-weight:900;'>" +
-        amount.toFixed(2) + " " + from + " → " + converted.toFixed(2) + " " + to +
-        "</div>" +
-        "<div class='small' style='margin-top:6px;'>" +
-        "Note: Final totals may differ depending on provider fees and markups." +
-        "</div>";
-    }
-  </script>
-</body>
-</html>
+  <section>
+    <h2>About QuickCurrency</h2>
+    <p>
+      QuickCurrency is an independently maintained educational website focused on exchange rates, conversion math, travel money decisions, and common fee traps. Learn more on our <a href="https://quickcurrency.net/about.html">About page</a> and read our <a href="https://quickcurrency.net/about.html#editorial-policy">Author &amp; Editorial Policy</a>.
+    </p>
+    <p>
+      Contact: <a href="mailto:demetria.houstonapts@gmail.com">demetria.houstonapts@gmail.com</a>
+    </p>
+  </section>
+</main>
 
